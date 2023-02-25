@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { ConfigProvider } from "antd";
+import vnVN from "antd/lib/locale/vi_VN";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import moment from "moment";
+import "./index.scss";
+import App from "./App";
+import ThemeProvider from "./theme/index";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+moment.locale("vi");
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <ConfigProvider locale={vnVN}>
+        <App />
+      </ConfigProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
