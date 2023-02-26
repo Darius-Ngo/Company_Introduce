@@ -1,3 +1,13 @@
+@import './access/scss/index.scss';
+
+.padding-app {
+  padding: 0 24px;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
 
 .loading-center {
   width: 100%;
@@ -31,4 +41,19 @@
   -webkit-line-clamp: 3; /* number of lines to show */
   line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.title-main {
+  font-size: 36px;
+  line-height: 2;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 2;
+}
+
+.page-common {
+  padding: 24px;
 }

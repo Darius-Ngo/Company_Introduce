@@ -8,11 +8,12 @@
 }
 
 html {
-  overflow: hidden;
+  overflow: hidden auto;
   scroll-behavior: smooth;
 }
 
 body {
   font-weight: 400;
   margin: 0;
+  height: 200vh;
 }
