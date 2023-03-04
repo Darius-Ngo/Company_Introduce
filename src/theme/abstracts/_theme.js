@@ -8,6 +8,7 @@ const theme = {
   black: "#000",
   white: "#fff",
   textColor: "#333",
+  textBlandColor: "#8c8c8c",
   paddingPageCommon: "0 24px",
   footerBg: "#020251",
 };

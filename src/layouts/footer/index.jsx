@@ -7,18 +7,28 @@ import { IoLocationSharp } from "react-icons/io5";
 import { AiFillClockCircle } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 import { Row, Col, Tooltip } from "antd";
+import { NavLink, useLocation } from "react-router-dom";
 import { WrapFooter } from "./styled";
 import logoImg from "../../access/img/logo.png";
 import FgImg from "../../access/img/fg.jpg";
 import { listMenu } from "../header";
-import { NavLink } from "react-router-dom";
+import ROUTER from "./../../routers/router";
 
 const Footer = () => {
+  const location = useLocation();
+  console.log(location.pathname);
+
   return (
-    <WrapFooter>
-      <div className="logo d-flex align-items-center justify-content-center">
-        <img src={logoImg} alt="" width={300} />
-      </div>
+    <WrapFooter
+      className={
+        location.pathname === ROUTER.HOME ? "clip_path" : "pt-36 mt-20"
+      }
+    >
+      {location.pathname === ROUTER.HOME && (
+        <div className="logo d-flex align-items-center justify-content-center">
+          <img src={logoImg} alt="" width={300} />
+        </div>
+      )}
       <Row gutter={24}>
         <Col xs={24} sm={24} lg={12} xl={8}>
           <div className="footer_content">

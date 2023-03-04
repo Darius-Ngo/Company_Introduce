@@ -33,6 +33,20 @@
   justify-content: flex-end;
 }
 
+.text-center {
+  text-align: center;
+}
+.pointer {
+  cursor: pointer;
+}
+.link {
+  color: #0958d9;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
 .fw-400 {
   font-weight: 400;
 }
@@ -246,6 +260,18 @@
 }
 .pt-16 {
   padding-top: 16px !important;
+}
+.pt-20 {
+  padding-top: 20px !important;
+}
+.pt-24 {
+  padding-top: 24px !important;
+}
+.pt-28 {
+  padding-top: 28px !important;
+}
+.pt-36 {
+  padding-top: 36px !important;
 }
 
 .pb-16 {

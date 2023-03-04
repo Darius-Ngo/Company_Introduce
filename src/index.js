@@ -1,5 +1,5 @@
-import { ConfigProvider } from "antd";
-import vnVN from "antd/lib/locale/vi_VN";
+// import { ConfigProvider } from "antd";
+// import vnVN from "antd/lib/locale/vi_VN";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import moment from "moment";
@@ -12,9 +12,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider>
-      <ConfigProvider locale={vnVN}>
-        <App />
-      </ConfigProvider>
+      {/* <ConfigProvider locale={vnVN}> */}
+      <App />
+      {/* </ConfigProvider> */}
     </ThemeProvider>
   </React.StrictMode>
 );
