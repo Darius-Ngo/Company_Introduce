@@ -9,6 +9,46 @@ export const StyledSevices = styled.div`
       box-shadow: 0px 1px 3px rgba(0, 81, 139, 1);
     }
   } */
+  .scrollbar {
+    float: left;
+    overflow-y: scroll;
+  }
+  .style-1::-webkit-scrollbar-thumb {
+    background-color: #5b5b5b;
+    border-radius: 1px;
+  }
+  /* .style-1::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: #f5f5f5;
+  } */
+  .style-1::-webkit-scrollbar {
+    width: 3px;
+    /* background-color: #f5f5f5; */
+    border-radius: 1px;
+  }
+  .force-overflow {
+    min-height: 450px;
+  }
+  .content-service {
+    padding: 8px 8px 0 0;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+    height: 85%;
+    div p {
+      font-size: 16px;
+      line-height: 30px;
+      margin: 0px;
+    }
+    li {
+      position: relative !important;
+      width: 95% !important;
+      height: unset !important;
+
+      list-style-type: disc !important;
+      margin-left: 15px;
+    }
+  }
   .div-img-title {
     margin-top: -10px;
     margin-bottom: 8px;
@@ -139,7 +179,8 @@ export const StyledSevices = styled.div`
     position: relative;
     list-style: none;
     width: 1000px;
-    height: 290px;
+    /* height: 290px; */
+    height: 84%;
     margin: auto;
   }
 

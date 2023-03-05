@@ -18,13 +18,12 @@ const StyledNewsItem = styled.div`
       transform: translateY(-10px);
     }
     box-shadow: -1px 1px 4px 1px rgb(0 0 0 / 5%);
-    border-radius: 10px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    width: 270px;
+    width: 320px;
     .new-img {
       width: 100%;
       display: flex;
@@ -33,7 +32,6 @@ const StyledNewsItem = styled.div`
       img {
         width: 100%;
         height: 170px;
-        border-radius: 10px;
         object-fit: cover;
       }
     }
@@ -56,6 +54,12 @@ const StyledNewsItem = styled.div`
       }
       .new-content {
         font-size: 14px;
+        line-height: 16px;
+        color: #5f6574;
+      }
+      .read-more {
+        margin-top: 16px;
+        font-size: 12px;
         line-height: 16px;
       }
     }
@@ -83,6 +87,8 @@ const NewsItem = () => {
               social communication. But by the time those traits can be detected
               and a child diagnosed...
             </div>
+
+            <div className="read-more">{"Read more >>"}</div>
           </div>
         </div>
       </div>
