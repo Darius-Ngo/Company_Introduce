@@ -30,6 +30,14 @@ const AppRouter = () => {
   return (
     <Routes>
       <Route
+        path={"/"}
+        element={
+          <LazyLoadingComponent>
+            <Home />
+          </LazyLoadingComponent>
+        }
+      />
+      <Route
         path={ROUTER.HOME}
         element={
           <LazyLoadingComponent>

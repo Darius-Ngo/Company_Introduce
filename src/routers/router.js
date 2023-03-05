@@ -1,5 +1,5 @@
 const ROUTER = {
-  HOME: "/",
+  HOME: "/home",
   ABOUT: "/about_us",
   SERVICES: "/services",
   CUSTOMER_REVIEWS: "/customer_reviews",
