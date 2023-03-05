@@ -125,7 +125,7 @@ const ContactUsPage = () => {
             before you make a decision to let us support you with your daily
             life. Thank you for the opportunity of serving you.
           </div>
-          <Form initialValues={{}} layout="vertical" className="mb-36">
+          <Form initialValues={{}} layout="vertical" className="mb-20">
             <Row gutter={16}>
               <Col xs={24} lg={24}>
                 <Form.Item>
