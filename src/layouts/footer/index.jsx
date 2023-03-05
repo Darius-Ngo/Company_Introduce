@@ -80,8 +80,8 @@ const Footer = () => {
           <div className="title">MELBOURNE BRANCH</div>
           <div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1627.037555962193!2d-119.03720598255612!3d35.353782200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea6a0e22bebb47%3A0x5b0e762d776115f0!2sHeart%20Virtue%20Inc.!5e0!3m2!1svi!2s!4v1677397079783!5m2!1svi!2s"
-              width="400"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1573.8863710536734!2d144.73976765113542!3d-37.91237427500442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6862d3ef3361d%3A0x137b7dd85a80b314!2s12%20Airlie%20Ave%2C%20Point%20Cook%20VIC%203030%2C%20%C3%9Ac!5e0!3m2!1svi!2s!4v1678006863358!5m2!1svi!2s"
+              width="100%"
               height="200"
               style={{ border: "0" }}
               allowfullscreen=""
@@ -95,19 +95,19 @@ const Footer = () => {
             className="footer_content fw-500 d-flex align-items-center"
           >
             <FaEnvelopeOpenText className="mr-8" />
-            info@anytimecare.com.au
+            info@heartandvitue.com.au
           </a>
           <a
-            href="tel: 1300 092 273"
+            href="tel: +61 042 6126 879"
             className="footer_content fw-500 d-flex align-items-center"
           >
             <BsFillTelephoneFill className="mr-8" />
-            1300 092 273
+            +61 042 6126 879
           </a>
           <div className="footer_content fw-500 d-flex align-items-center">
             <IoLocationSharp className="mr-8" />
             <div className="phone-contact_number">
-              2821 Brundage Ln, Bakersfield, CA 93304, Hoa Kỳ
+              12 Airlie Avenue, Point Cook, 3030 VIC
             </div>
           </div>
           <div className="footer_content fw-500 d-flex align-items-center">

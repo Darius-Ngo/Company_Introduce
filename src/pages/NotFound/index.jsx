@@ -8,7 +8,7 @@ function NotFound() {
       title="404 NotFound"
       subTitle="Xin lỗi, Trang web bạn đang tìm kiếm không tồn tại."
       extra={
-        <NavLink to="/home">
+        <NavLink to="/">
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button type="primary">Quay lại trang chủ</Button>
           </div>

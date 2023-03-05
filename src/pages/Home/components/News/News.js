@@ -1,9 +1,11 @@
 import { Divider } from "antd";
+import { RxDoubleArrowRight } from "react-icons/rx";
+import { NavLink } from "react-router-dom";
+import ROUTER from "src/routers/router";
 import styled from "styled-components";
 // Import Swiper React components
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // import required modules
 import { Navigation } from "swiper";
 
@@ -45,7 +47,9 @@ const News = () => {
     <StyledNews>
       <div className="new-title">
         <div className="new-title-content">NEWS</div>
-        <div className="new-title-see"> {"See more>>"}</div>
+        <NavLink to={ROUTER.NEWS} className=" d-flex align-items-center link">
+          See more <RxDoubleArrowRight className="ml-5" />
+        </NavLink>
       </div>
       <Divider style={{ marginTop: "8px" }} />
       {/* <Row gutter={[16, 16]}>

@@ -17,12 +17,12 @@ export const WrapHeader = styled.div`
     }
     .phone-contact {
       margin-left: 16px;
-      padding: 0 20px;
+      padding: 0 16px;
       border-radius: 30px;
       background-color: ${({ theme }) => `${theme.white};`};
       color: ${({ theme }) => `${theme.black};`};
       &_number {
-        padding: 11px 8px;
+        padding: 7px 8px;
         color: ${({ theme }) => `${theme.black};`};
         border-left: 1px solid ${({ theme }) => `${theme.black};`};
         font-weight: 500;
