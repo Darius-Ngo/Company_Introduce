@@ -10,13 +10,11 @@ import ThemeProvider from "./theme/index";
 moment.locale("vi");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <ThemeProvider>
-      <ConfigProvider locale={vnVN}>
-        <App />
-      </ConfigProvider>
-    </ThemeProvider>
-  </React.StrictMode>
+  <ThemeProvider>
+    <ConfigProvider locale={vnVN}>
+      <App />
+    </ConfigProvider>
+  </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

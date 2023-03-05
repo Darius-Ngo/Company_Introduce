@@ -128,9 +128,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="slogan d-flex align-items-center justify-content-center">
-        <h2>Warm heart - Warms hands</h2>
-      </div>
     </WrapHeader>
   );
 };

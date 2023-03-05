@@ -5,6 +5,7 @@ import ROUTER from "./router";
 import NotFound from "./../pages/NotFound";
 import Home from "./../pages/Home";
 import ABOUT from "./../pages/About";
+import NewList from "src/pages/News";
 
 function LazyLoadingComponent({ children }) {
   return (
@@ -27,7 +28,7 @@ const AppRouter = () => {
         path={ROUTER.HOME}
         element={
           <LazyLoadingComponent>
-            <ABOUT />
+            <Home />
           </LazyLoadingComponent>
         }
       />
@@ -75,7 +76,7 @@ const AppRouter = () => {
         path={ROUTER.NEWS}
         element={
           <LazyLoadingComponent>
-            <ABOUT />
+            <NewList />
           </LazyLoadingComponent>
         }
       />

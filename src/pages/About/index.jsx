@@ -1,9 +1,15 @@
+import { WrapHeader } from "../../layouts/header/styled";
 import { WrapAboutPage } from "./styled";
 
 const AboutPage = () => {
   return (
     <div className="page-common">
       <WrapAboutPage>
+        <WrapHeader>
+          <div className="slogan d-flex align-items-center justify-content-center">
+            <h2>Warm heart - Warms hands</h2>
+          </div>
+        </WrapHeader>
         <div className="title-main">Heart and Virtue</div>
         <div className="subtitle">Warm heart- Warm hands</div>
         <p>
