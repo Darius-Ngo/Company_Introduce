@@ -204,6 +204,8 @@ export const StyledSevices = styled.div`
 
   .pic-details-demo-image-wrapper li a {
     width: 220px;
+    bottom: 0;
+    right: 0;
     z-index: 1;
     display: inline-block;
     position: absolute;

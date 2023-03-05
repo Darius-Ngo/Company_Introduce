@@ -7,23 +7,9 @@ import ReactDOM from "react-dom";
 import React from "react";
 import { StyledSevices } from "./styled";
 import { Button, Tooltip } from "antd";
-import { textData } from "../data";
+import { dataArrayImg, textData } from "../data";
 
-let dataArray = [
-  { image: "https://zos.alipayobjects.com/rmsportal/DGOtoWASeguMJgV.png" },
-  { image: "https://zos.alipayobjects.com/rmsportal/BXJNKCeUSkhQoSS.png" },
-  { image: "https://zos.alipayobjects.com/rmsportal/TDIbcrKdLWVeWJM.png" },
-  { image: "https://zos.alipayobjects.com/rmsportal/SDLiKqyfBvnKMrA.png" },
-  { image: "https://zos.alipayobjects.com/rmsportal/UcVbOrSDHCLPqLG.png" },
-  { image: "https://zos.alipayobjects.com/rmsportal/QJmGZYJBRLkxFSy.png" },
-  { image: "https://zos.alipayobjects.com/rmsportal/PDiTkHViQNVHddN.png" },
-  { image: "https://zos.alipayobjects.com/rmsportal/beHtidyjUMOXbkI.png" },
-  { image: "https://zos.alipayobjects.com/rmsportal/vJcpMCTaSKSVWyH.png" },
-  { image: "https://zos.alipayobjects.com/rmsportal/dvQuFtUoRmvWLsZ.png" },
-  // { image: "https://zos.alipayobjects.com/rmsportal/QqWQKvgLSJaYbpr.png" },
-  // { image: "https://zos.alipayobjects.com/rmsportal/pTfNdthdsUpLPLJ.png" },
-];
-dataArray = dataArray.map((item, i) => ({ ...item, ...textData[i] }));
+let dataArray = dataArrayImg.map((item, i) => ({ ...item, ...textData[i] }));
 class PicDetailsDemo extends React.Component {
   static propTypes = {
     className: PropTypes.string,
@@ -162,6 +148,10 @@ class PicDetailsDemo extends React.Component {
               alt={""}
               width="100%"
               height="100%"
+              style={{
+                objectFit: "cover",
+                borderRadius: isOpen ? "0px" : "5px",
+              }}
             />
           </TweenOne>
           <TweenOneGroup

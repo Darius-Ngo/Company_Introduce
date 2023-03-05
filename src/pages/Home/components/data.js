@@ -1,3 +1,14 @@
+import img1 from "src/access/img/services/1.jpg";
+import img2 from "src/access/img/services/2.jpg";
+import img3 from "src/access/img/services/3.jpg";
+import img4 from "src/access/img/services/4.jpg";
+import img5 from "src/access/img/services/5.jpg";
+import img6 from "src/access/img/services/6.jpg";
+import img7 from "src/access/img/services/7.jpg";
+import img8 from "src/access/img/services/8.webp";
+import img9 from "src/access/img/services/9.jpg";
+import img10 from "src/access/img/services/10.jpg";
+
 export const imgArrayOffice = [
   {
     img: "https://images.wallpaperscraft.com/image/single/desk_office_chair_design_80711_3840x2160.jpg",
@@ -97,4 +108,19 @@ We provide respite accommodation, which is a great place to meet people, enjoy a
     content:
       '<p dir="ltr">Develop skills which will assist you to build a positive future. Our group day service and post school options offer a wide range of program options which allow you to learn skills, pursue your interests, build confidence and increase your independence.</p>\n<p dir="ltr">Individual Skills Development and Training includes, but are not limited to-</p>\n<ul>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Public transport training and support</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Money handling skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Developing skills for community, social and recreational participation</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Developing skills for road safety</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Developing decision making skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Improving social interaction and communication skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Improved decision making skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Problem solving skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Personal hygiene skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Literacy and Numeracy skills</p>\n</li>\n</ul>',
   },
+];
+
+export const dataArrayImg = [
+  { image: img1 },
+  { image: img2 },
+  { image: img3 },
+  { image: img4 },
+  { image: img5 },
+  { image: img6 },
+  { image: img7 },
+  { image: img8 },
+  { image: img9 },
+  { image: img10 },
+  // { image: "https://zos.alipayobjects.com/rmsportal/QqWQKvgLSJaYbpr.png" },
+  // { image: "https://zos.alipayobjects.com/rmsportal/pTfNdthdsUpLPLJ.png" },
 ];
