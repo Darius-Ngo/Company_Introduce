@@ -56,7 +56,6 @@ export const listMenu = [
 const Header = () => {
   const headerRef = useRef();
   const location = useLocation();
-  console.log(location);
   useEffect(() => {
     const shrinkHeader = () => {
       if (

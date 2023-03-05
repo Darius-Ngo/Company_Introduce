@@ -3,7 +3,7 @@ import { WrapAboutPage } from "./styled";
 
 const AboutPage = () => {
   return (
-    <div className="page-common">
+    <div className="">
       <WrapAboutPage>
         <WrapHeader>
           <div className="slogan d-flex align-items-center justify-content-center">

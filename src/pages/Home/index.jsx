@@ -57,7 +57,7 @@ const StyledHomePage = styled.div`
     ::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: ${({ theme }) => `${theme.headerTopHeight};`};
       left: 0;
       right: 0;
       bottom: 0;
