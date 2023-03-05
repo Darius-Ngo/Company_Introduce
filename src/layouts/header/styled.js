@@ -40,7 +40,6 @@ export const WrapHeader = styled.div`
       background-color: transparent;
       transition: all 0.3s ease-in-out;
       color: ${({ theme }) => `${theme.white};`};
-      color: ${({ theme }) => `${theme.textColor};`};
       &.shrink {
         height: ${({ theme }) => `${theme.headerShrinkHeight};`};
         position: fixed;
@@ -79,7 +78,6 @@ export const WrapHeader = styled.div`
           height: 3px;
           background-color: ${({ theme }) => `${theme.white};`};
           transition: all 0.3s ease-in;
-          background-color: ${({ theme }) => `${theme.textColor};`};
         }
         &.active,
         &:hover {
