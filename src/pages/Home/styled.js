@@ -29,7 +29,33 @@ export const StyledHomePage = styled.div`
     }
   }
   .why-us {
-    height: 90vh !important;
+    .enquire {
+      padding: 24px 300px !important;
+      .enquire-form {
+        .enquire-title {
+          font-size: 24px;
+          margin-bottom: 16px;
+          text-align: center;
+          font-weight: bold;
+        }
+        border-radius: 10px;
+        padding: 16px;
+
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        .ant-btn {
+          padding: 8px 20px;
+          background: #070f67;
+          text-align: center;
+          font-weight: 600;
+          height: 40px !important;
+          :hover {
+            background: #007aff;
+            box-shadow: 0 0 5px #007aff5c;
+          }
+        }
+      }
+    }
+    height: 150vh !important;
     background: #fff;
     padding: 24px 130px;
     .div-logo {

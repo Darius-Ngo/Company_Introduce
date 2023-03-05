@@ -1,4 +1,4 @@
-import { Button, Col, Divider, Rate, Row } from "antd";
+import { Button, Col, Divider, Form, Input, Rate, Row } from "antd";
 import { useEffect } from "react";
 import styled from "styled-components";
 import Banner from "./components/Banner/Banner";
@@ -9,112 +9,13 @@ import logoImg from "src/access/img/logo.png";
 import whyus from "src/access/img/why-us.png";
 import { StyledSevices } from "./components/Services/styled";
 import { StyledHomePage } from "./styled";
-const StyledCustomerReviewItem = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0 24px;
-  .ml-16 {
-    margin-left: 16px;
-  }
-  .mr-16 {
-    margin-right: 16px;
-  }
-  img {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: rgb(0 0 0 / 12%) 0 1px 3px;
-  }
-  .video-bg {
-    video {
-      width: 100%;
-      height: calc(100vh - 44px);
-      object-fit: cover;
-    }
-    .content-bg {
-      position: absolute;
-      left: 10%;
-      top: 40%;
-      .ant-btn {
-        padding: 10px 15px;
-        text-align: center;
-        height: 50px !important;
-        background: #000064;
-        :hover {
-          background: #015ee1;
-          transform: translateY(-10px);
-          box-shadow: 0px 5px 30px rgba(0, 174, 255, 0.692);
-        }
-      }
-      .content-bg-title {
-        font-size: 50px;
-        font-weight: 600;
-        color: #fff;
-        margin-bottom: 24px;
-      }
-      .content-bg-label {
-        width: 40%;
-        font-size: 20px;
-        color: #fff;
-        margin-bottom: 24px;
-      }
-    }
-    ::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: #0000004d;
-    }
-  }
-`;
-const CustomerReviewItem = ({ isRight }) => {
-  return (
-    <StyledCustomerReviewItem>
-      {!isRight && (
-        <div className="mr-16">
-          <div>
-            "Very satisfied working with proactive team at Heart and Virtue,
-            they are very detailed with their service delivery and provided
-            exceptional services to its participants." <b>Ms. Wanda</b> said
-          </div>
-          <div>
-            <Rate value={5} allowHalf disabled />
-            <span style={{ fontSize: "12px" }}> (5.0)</span>
-          </div>
-        </div>
-      )}
-      <div>
-        <img
-          src="https://d.newsweek.com/en/full/2150657/grandmother-smells-sharing-room-visit-reddit-aita.jpg?w=1600&h=1200&q=88&f=e8f7b0e476befadcdf7b9155e4670e7a"
-          alt=""
-        />
-        <div></div>
-      </div>
-      {!!isRight && (
-        <div className="ml-16">
-          <div>
-            "Very satisfied working with proactive team at Heart and Virtue,
-            they are very detailed with their service delivery and provided
-            exceptional services to its participants." <b>Ms. Wanda</b> said
-          </div>
-          <div>
-            <Rate value={5} allowHalf disabled />
-            <span style={{ fontSize: "12px" }}> (5.0)</span>
-          </div>
-        </div>
-      )}
-    </StyledCustomerReviewItem>
-  );
-};
+import CustomerReviewItem from "../Reviews/components/CustomerReviewItem";
+import { getRegexEmail, getRegexMobile } from "../MakeAReferral";
 const HomePage = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0 });
   }, []);
+  const [form] = Form.useForm();
 
   return (
     <StyledHomePage>
@@ -168,6 +69,95 @@ const HomePage = () => {
                 exceed expectations and make a real difference to the lives of
                 people we support.
               </div>
+            </div>
+          </Col>
+          <Col span={24} className={"enquire"}>
+            <div className="enquire-form">
+              <div className="enquire-title">ENQUIRE NOW</div>
+              <Form form={form} layout="vertical">
+                <Row
+                  gutter={[16, 16]}
+                  style={{ width: "100%", display: "flex" }}
+                >
+                  <Col span={24}>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                          message: "Information cannot be blank!",
+                        },
+                      ]}
+                      label="Your Name: "
+                      name="YourName"
+                    >
+                      <Input placeholder="Your Name*" />
+                    </Form.Item>
+                  </Col>
+                  <Col span={12}>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                          message: "Information cannot be blank!",
+                        },
+                        {
+                          pattern: getRegexEmail(),
+                          message: "Email entered wrong format!",
+                        },
+                      ]}
+                      label="Your Email : "
+                      name="Email"
+                    >
+                      <Input placeholder="Your Email*" />
+                    </Form.Item>
+                  </Col>
+                  <Col span={12}>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                          message: "Information cannot be blank!",
+                        },
+                        {
+                          pattern: getRegexMobile(),
+                          message: "PhoneNumber entered wrong format!",
+                        },
+                      ]}
+                      label="Phone"
+                      name="phone"
+                    >
+                      <Input placeholder="Phone*" />
+                    </Form.Item>
+                  </Col>
+                  <Col span={24}>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                          message: "Information cannot be blank!",
+                        },
+                      ]}
+                      label=" How Can We Help?"
+                      name="help"
+                    >
+                      <Input.TextArea
+                        rows={4}
+                        placeholder="How Can We Help?*"
+                      />
+                    </Form.Item>
+                  </Col>
+                  <Col span={24}>
+                    <Button
+                      type="primary"
+                      onClick={async () => {
+                        const vaue = await form.validateFields();
+                      }}
+                    >
+                      SEND
+                    </Button>
+                  </Col>
+                </Row>
+              </Form>
             </div>
           </Col>
         </Row>
