@@ -6,6 +6,9 @@ import NotFound from "./../pages/NotFound";
 import Home from "./../pages/Home";
 import ABOUT from "./../pages/About";
 import NewList from "src/pages/News";
+import ContactUsPage from "./../pages/ContactUs";
+import Header from "../layouts/header";
+import Footer from "./../layouts/footer";
 
 function LazyLoadingComponent({ children }) {
   return (
@@ -16,7 +19,9 @@ function LazyLoadingComponent({ children }) {
         </div>
       }
     >
+      <Header />
       {children}
+      <Footer />
     </React.Suspense>
   );
 }
@@ -44,7 +49,7 @@ const AppRouter = () => {
         path={ROUTER.CONTACT_US}
         element={
           <LazyLoadingComponent>
-            <ABOUT />
+            <ContactUsPage />
           </LazyLoadingComponent>
         }
       />
@@ -88,14 +93,7 @@ const AppRouter = () => {
           </LazyLoadingComponent>
         }
       />
-      <Route
-        path="*"
-        element={
-          <LazyLoadingComponent>
-            <NotFound />
-          </LazyLoadingComponent>
-        }
-      />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

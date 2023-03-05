@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const WrapFooter = styled.div`
   background-color: ${({ theme }) => `${theme.footerBg};`};
   padding: ${({ theme }) => `${theme.paddingPageCommon};`};
-  clip-path: circle(190vh at 50% 190vh);
-
+  &.clip_path {
+    clip-path: circle(190vh at 50% 190vh);
+  }
   .logo {
   }
   .footer_content {
