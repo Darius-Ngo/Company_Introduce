@@ -32,7 +32,7 @@ export const StyledHomePage = styled.div`
     background: #fff;
     padding: 24px 110px;
     .enquire {
-      padding: 24px 300px !important;
+      padding: 24px !important;
       .enquire-form {
         .enquire-title {
           font-size: 24px;

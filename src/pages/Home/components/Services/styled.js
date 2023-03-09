@@ -64,7 +64,7 @@ export const StyledSevices = styled.div`
   }
   .pic-details-demo-wrapper {
     position: relative;
-    background: #edcccc;
+    background: #fff;
     overflow: hidden;
     /* height: calc(100vh - 20px); */
     position: relative;
