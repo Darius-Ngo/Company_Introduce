@@ -29,6 +29,8 @@ export const StyledHomePage = styled.div`
     }
   }
   .why-us {
+    background: #fff;
+    padding: 24px 110px;
     .enquire {
       padding: 24px 300px !important;
       .enquire-form {
@@ -55,9 +57,6 @@ export const StyledHomePage = styled.div`
         }
       }
     }
-    height: 150vh !important;
-    background: #fff;
-    padding: 24px 130px;
     .div-logo {
       display: flex;
       justify-content: center;

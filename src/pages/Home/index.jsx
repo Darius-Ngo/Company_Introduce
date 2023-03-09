@@ -176,7 +176,7 @@ const HomePage = () => {
           <div className="customer-review-see-all">{"See all >>"}</div>
         </div>
         <Divider style={{ marginTop: "12px" }} />
-        <Row style={{ padding: "24px 195px" }}>
+        <Row style={{ padding: "24px 150px" }}>
           <Col span={12}>
             <CustomerReviewItem isRight />
           </Col>

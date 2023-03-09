@@ -66,7 +66,7 @@ export const StyledSevices = styled.div`
     position: relative;
     background: #edcccc;
     overflow: hidden;
-    height: calc(100vh - 20px);
+    /* height: calc(100vh - 20px); */
     position: relative;
     /* ::before {
       content: "";
@@ -84,7 +84,8 @@ export const StyledSevices = styled.div`
     margin: 40px 20px;
     box-shadow: 0 10px 40px #c7d7b5;
     min-width: 550px;
-    height: calc(100vh - 80px);
+    /* height: calc(100vh - 80px); */
+    height: 700px;
     background: #fff;
     border-radius: 6px;
     overflow: hidden;
