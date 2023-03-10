@@ -9,6 +9,8 @@ import NewList from "src/pages/News";
 import ContactUsPage from "./../pages/ContactUs";
 import Header from "../layouts/header";
 import Footer from "./../layouts/footer";
+import Reviews from "src/pages/Reviews";
+import MakeAReferral from "src/pages/MakeAReferral";
 
 function LazyLoadingComponent({ children }) {
   return (
@@ -29,6 +31,14 @@ function LazyLoadingComponent({ children }) {
 const AppRouter = () => {
   return (
     <Routes>
+      <Route
+        path={"/"}
+        element={
+          <LazyLoadingComponent>
+            <Home />
+          </LazyLoadingComponent>
+        }
+      />
       <Route
         path={ROUTER.HOME}
         element={
@@ -57,7 +67,7 @@ const AppRouter = () => {
         path={ROUTER.CUSTOMER_REVIEWS}
         element={
           <LazyLoadingComponent>
-            <ABOUT />
+            <Reviews />
           </LazyLoadingComponent>
         }
       />
@@ -73,7 +83,7 @@ const AppRouter = () => {
         path={ROUTER.MAKE_A_REFERRAL}
         element={
           <LazyLoadingComponent>
-            <ABOUT />
+            <MakeAReferral />
           </LazyLoadingComponent>
         }
       />
