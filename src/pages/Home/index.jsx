@@ -1,78 +1,75 @@
-import { Button, Col, Divider, Form, Input, Rate, Row } from "antd";
+import { Button, Col, Divider, Form, Input, Row } from "antd";
 import { useEffect } from "react";
-import styled from "styled-components";
+import wu2 from "src/access/img/services/wu2.png";
+import { getRegexEmail, getRegexMobile } from "../MakeAReferral";
+import CustomerReviewItem from "../Reviews/components/CustomerReviewItem";
 import Banner from "./components/Banner/Banner";
 import { imgArrayOffice } from "./components/data";
 import News from "./components/News/News";
 import PicDetailsDemo from "./components/Services/Service";
-import logoImg from "src/access/img/logo.png";
-import whyus from "src/access/img/why-us.png";
-import { StyledSevices } from "./components/Services/styled";
-// import { StyledHomePage } from "./styled";
-import CustomerReviewItem from "../Reviews/components/CustomerReviewItem";
-import { getRegexEmail, getRegexMobile } from "../MakeAReferral";
-import wu2 from "src/access/img/services/wu2.png";
+import { StyledHomePage } from "./styled";
 
-const StyledHomePage = styled.div`
-  .my-office {
-    .my-office-title {
-      font-size: 23px;
-      margin: 20px auto;
-      font-weight: bold;
-      text-align: center;
-    }
-  }
-  .why-us {
-    height: 100vh !important;
-    background: #fff;
-  }
-  .video-bg {
-    position: relative;
-    video {
-      width: 100%;
-      height: calc(100vh - 44px);
-      object-fit: cover;
-    }
-    .content-bg {
-      position: absolute;
-      left: 10%;
-      top: 40%;
-      .ant-btn {
-        padding: 10px 15px;
-        text-align: center;
-        height: 50px !important;
-        background: #000064;
-        :hover {
-          background: #015ee1;
-          transform: translateY(-10px);
-          box-shadow: 0px 5px 30px rgba(0, 174, 255, 0.692);
-        }
-      }
-      .content-bg-title {
-        font-size: 50px;
-        font-weight: 600;
-        color: #fff;
-        margin-bottom: 24px;
-      }
-      .content-bg-label {
-        width: 40%;
-        font-size: 20px;
-        color: #fff;
-        margin-bottom: 24px;
-      }
-    }
-    ::before {
-      content: "";
-      position: absolute;
-      top: ${({ theme }) => `${theme.headerTopHeight};`};
-      left: 0;
-      right: 0;
-      bottom: 0;
+// const StyledHomePage = styled.div`
+//   .my-office {
+//     .my-office-title {
+//       font-size: 23px;
+//       margin: 20px auto;
+//       font-weight: bold;
+//       text-align: center;
+//     }
+//   }
+//   .why-us {
+//     height: 100vh !important;
+//     background: #fff;
+//   }
+//   .video-bg {
+//     position: relative;
+//     video {
+//       width: 100%;
+//       height: calc(100vh - 44px);
+//       object-fit: cover;
+//     }
+//     .content-bg {
+//       position: absolute;
+//       left: 10%;
+//       top: 40%;
+//       .ant-btn {
+//         padding: 10px 15px;
+//         text-align: center;
+//         height: 50px !important;
+//         background: #000064;
+//         :hover {
+//           background: #015ee1;
+//           transform: translateY(-10px);
+//           box-shadow: 0px 5px 30px rgba(0, 174, 255, 0.692);
+//         }
+//       }
+//       .content-bg-title {
+//         font-size: 50px;
+//         font-weight: 600;
+//         color: #fff;
+//         margin-bottom: 24px;
+//       }
+//       .content-bg-label {
+//         width: 40%;
+//         font-size: 20px;
+//         color: #fff;
+//         margin-bottom: 24px;
+//       }
+//     }
+//     :before {
+//       content: "";
+//       position: absolute;
+//       /* top: ${({ theme }) => `${theme.headerTopHeight};`}; */
+//       top: 0px;
+//       left: 0;
+//       right: 0;
+//       bottom: 0;
 
-      background: #0000004d;
-    }
-  }
-`;
+//       background: #0000004d;
+//     }
+//   }
+// `;
 
 const HomePage = () => {
   useEffect(() => {

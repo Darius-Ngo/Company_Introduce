@@ -104,10 +104,10 @@ export const StyledHomePage = styled.div`
         margin-bottom: 24px;
       }
     }
-    ::before {
+    :before {
       content: "";
       position: absolute;
-      top: 0;
+      top: ${({ theme }) => `${theme.headerTopHeight};`};
       left: 0;
       right: 0;
       bottom: 0;

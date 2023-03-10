@@ -18,7 +18,7 @@ const Reviews = () => {
       </WrapAboutPage>
       <div className="customer-review">
         <Divider style={{ marginTop: "12px" }} />
-        <Row style={{ padding: "24px 195px" }}>
+        <Row style={{ padding: "24px 100px" }}>
           <Col span={12}>
             <CustomerReviewItem isRight />
           </Col>
