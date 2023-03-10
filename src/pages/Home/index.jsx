@@ -21,6 +21,7 @@ const StyledHomePage = styled.div`
     background: #fff;
   }
   .video-bg {
+    position: relative;
     video {
       width: 100%;
       height: calc(100vh - 44px);

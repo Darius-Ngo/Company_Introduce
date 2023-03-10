@@ -1,7 +1,6 @@
 import QueueAnim from "rc-queue-anim";
 import PropTypes from "prop-types";
 import TweenOne, { TweenOneGroup } from "rc-tween-one";
-// import TweenOneGroup from "rc-tween-one/lib/TweenOneGroup";
 import { CloseOutlined } from "@ant-design/icons";
 import ReactDOM from "react-dom";
 import React from "react";
@@ -20,8 +19,6 @@ let dataArray = [
   { image: "https://zos.alipayobjects.com/rmsportal/beHtidyjUMOXbkI.png" },
   { image: "https://zos.alipayobjects.com/rmsportal/vJcpMCTaSKSVWyH.png" },
   { image: "https://zos.alipayobjects.com/rmsportal/dvQuFtUoRmvWLsZ.png" },
-  // { image: "https://zos.alipayobjects.com/rmsportal/QqWQKvgLSJaYbpr.png" },
-  // { image: "https://zos.alipayobjects.com/rmsportal/pTfNdthdsUpLPLJ.png" },
 ];
 dataArray = dataArray.map((item, i) => ({ ...item, ...textData[i] }));
 class PicDetailsDemo extends React.Component {
@@ -120,7 +117,6 @@ class PicDetailsDemo extends React.Component {
           }
         : aAnimation;
 
-      // 位置 js 控制；
       return (
         <TweenOne
           key={i}
