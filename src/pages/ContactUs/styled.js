@@ -77,6 +77,7 @@ export const ContactPageStyle = styled.div`
   }
   .btn-send {
     background: ${({ theme }) => theme.primaryColor};
+    border-color: ${({ theme }) => theme.primaryColor};
     height: 40px;
     color: #fff;
     padding: 4px 30px;

@@ -95,7 +95,7 @@ const HomePage = () => {
             for daily life and healthy relationships, as well as supporting them
             to boost their confidence every day.
           </div>
-          <Button type="primary">GET STARTED</Button>
+          <Button>GET STARTED</Button>
         </div>
       </div>
       <PicDetailsDemo />
@@ -264,7 +264,6 @@ const HomePage = () => {
                   </Col>
                   <Col span={24}>
                     <Button
-                      type="primary"
                       onClick={async () => {
                         const vaue = await form.validateFields();
                       }}

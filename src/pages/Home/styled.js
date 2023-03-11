@@ -10,6 +10,7 @@ export const StyledHomePage = styled.div`
       .customer-review-title {
         font-size: 23px;
         font-weight: bold;
+        color: ${({ theme }) => theme.primaryColor};
       }
       .customer-review-see-all {
         cursor: pointer;
@@ -26,6 +27,7 @@ export const StyledHomePage = styled.div`
       margin: 20px auto;
       font-weight: bold;
       text-align: center;
+      color: ${({ theme }) => theme.primaryColor};
     }
   }
   .why-us {
@@ -39,6 +41,7 @@ export const StyledHomePage = styled.div`
           margin-bottom: 16px;
           text-align: center;
           font-weight: bold;
+          color: ${({ theme }) => theme.primaryColor};
         }
         border-radius: 10px;
         padding: 16px;
@@ -46,13 +49,15 @@ export const StyledHomePage = styled.div`
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
         .ant-btn {
           padding: 8px 20px;
-          background: #070f67;
           text-align: center;
           font-weight: 600;
           height: 40px !important;
+          background-color: ${({ theme }) => theme.primaryColor};
+          border-color: ${({ theme }) => theme.primaryColor};
+          color: #fff;
           :hover {
-            background: #007aff;
-            box-shadow: 0 0 5px #007aff5c;
+            background-color: ${({ theme }) => theme.primaryColor};
+            box-shadow: 0 0 5px ${({ theme }) => theme.primaryColor};
           }
         }
       }
@@ -84,11 +89,12 @@ export const StyledHomePage = styled.div`
         padding: 10px 15px;
         text-align: center;
         height: 50px !important;
-        background: #000064;
+        background-color: ${({ theme }) => theme.primaryColor};
+        border-color: ${({ theme }) => theme.primaryColor};
+        color: #fff;
         :hover {
-          background: #015ee1;
-          transform: translateY(-10px);
-          box-shadow: 0px 5px 30px rgba(0, 174, 255, 0.692);
+          transform: translateY(-4px);
+          box-shadow: 0px 5px 30px rgba(224, 128, 129, 0.692);
         }
       }
       .content-bg-title {

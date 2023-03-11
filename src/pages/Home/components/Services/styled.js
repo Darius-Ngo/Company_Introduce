@@ -53,6 +53,7 @@ export const StyledSevices = styled.div`
     margin-top: -10px;
     margin-bottom: 8px;
     background: #fff;
+    color: ${({ theme }) => theme.primaryColor};
   }
   .content-title {
     display: flex;
@@ -166,7 +167,7 @@ export const StyledSevices = styled.div`
   }
 
   .pic-details-demo-title h1 {
-    color: #666666;
+    color: #e86768;
     font-size: 26px;
   }
 

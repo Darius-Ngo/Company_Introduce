@@ -22,6 +22,7 @@ export const StyledNews = styled.div`
     .new-title-content {
       font-size: 24px;
       font-weight: bold;
+      color: ${({ theme }) => theme.primaryColor};
     }
     .new-title-see {
       cursor: pointer;

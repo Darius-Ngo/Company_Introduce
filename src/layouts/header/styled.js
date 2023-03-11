@@ -3,7 +3,7 @@ import bgr1 from "../../access/img/bgr1.jpg";
 
 export const WrapHeader = styled.div`
   .top-header {
-    background-color: ${({ theme }) => `${theme.black};`};
+    background-color: ${({ theme }) => `${theme.primaryColor};`};
     color: ${({ theme }) => `${theme.white};`};
     height: ${({ theme }) => `${theme.headerTopHeight};`};
     .contact-info {
@@ -20,11 +20,11 @@ export const WrapHeader = styled.div`
       padding: 0 16px;
       border-radius: 30px;
       background-color: ${({ theme }) => `${theme.white};`};
-      color: ${({ theme }) => `${theme.black};`};
+      color: ${({ theme }) => `${theme.primaryColor};`};
       &_number {
         padding: 7px 8px;
-        color: ${({ theme }) => `${theme.black};`};
-        border-left: 1px solid ${({ theme }) => `${theme.black};`};
+        color: ${({ theme }) => `${theme.primaryColor};`};
+        border-left: 1px solid ${({ theme }) => `${theme.primaryColor};`};
         font-weight: 500;
       }
     }
@@ -39,7 +39,7 @@ export const WrapHeader = styled.div`
       height: ${({ theme }) => `${theme.headerContentHeight};`};
       background-color: transparent;
       transition: all 0.3s ease-in-out;
-      color: ${({ theme }) => `${theme.white};`};
+      color: ${({ theme }) => `${theme.primaryColor};`};
       &.shrink {
         height: ${({ theme }) => `${theme.headerShrinkHeight};`};
         position: fixed;
@@ -48,10 +48,10 @@ export const WrapHeader = styled.div`
         right: 0;
         background-color: ${({ theme }) => `${theme.white};`};
         box-shadow: rgb(0 0 0 / 12%) 0 1px 3px;
-        color: ${({ theme }) => `${theme.textColor};`};
+        color: ${({ theme }) => `${theme.primaryColor};`};
         .menu-list_item {
           &::before {
-            background-color: ${({ theme }) => `${theme.textColor};`};
+            background-color: ${({ theme }) => `${theme.primaryColor};`};
           }
         }
       }
@@ -76,7 +76,7 @@ export const WrapHeader = styled.div`
           left: 50%;
           width: 0;
           height: 3px;
-          background-color: ${({ theme }) => `${theme.white};`};
+          background-color: ${({ theme }) => `${theme.primaryColor};`};
           transition: all 0.3s ease-in;
         }
         &.active,
@@ -100,7 +100,7 @@ export const WrapHeader = styled.div`
           background-color: ${({ theme }) => `${theme.white};`};
           display: flex;
           flex-wrap: wrap;
-          width: 550px;
+          width: 600px;
           opacity: 0;
           transition: all 0.4s ease-in-out;
           pointer-events: none;
