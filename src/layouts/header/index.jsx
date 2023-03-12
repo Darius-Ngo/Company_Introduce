@@ -122,25 +122,35 @@ const Header = () => {
             <img src={logoImg} alt="" />
           </div>
           <div className="menu-list d-flex align-items-center">
-            {listMenu.map((item, idx) => (
-              <NavLink
-                to={item.path}
-                className={`menu-list_item ${
-                  location.pathname === item.path ? "active" : ""
-                }`}
-              >
-                <div className="menu-list_item_value">{item.name}</div>
-                {item.submenu ? (
-                  <div className="submenu">
-                    {item.submenu.map((i, idx) => (
-                      <div className="submenu_item">
-                        <div className="text">{i.name}</div>
-                      </div>
-                    ))}
-                  </div>
-                ) : null}
-              </NavLink>
-            ))}
+            {listMenu.map((item, idx) =>
+              item.submenu ? (
+                <div
+                  className={`menu-list_item ${
+                    location.pathname === item.path ? "active" : ""
+                  }`}
+                >
+                  <div className="menu-list_item_value">{item.name}</div>
+                  {item.submenu ? (
+                    <div className="submenu">
+                      {item.submenu.map((i, idx) => (
+                        <div className="submenu_item">
+                          <div className="text">{i.name}</div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              ) : (
+                <NavLink
+                  to={item.path}
+                  className={`menu-list_item ${
+                    location.pathname === item.path ? "active" : ""
+                  }`}
+                >
+                  <div className="menu-list_item_value">{item.name}</div>
+                </NavLink>
+              )
+            )}
           </div>
         </div>
       </div>

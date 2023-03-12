@@ -54,14 +54,22 @@ export const WrapHeader = styled.div`
             background-color: ${({ theme }) => `${theme.primaryColor};`};
           }
         }
+        .logo-web {
+          img {
+            filter: brightness(150%);
+          }
+        }
       }
       &_menu {
         height: 100%;
       }
       .logo-web {
         height: 100%;
+        display: flex;
+        align-items: center;
         img {
-          height: 100%;
+          height: 70%;
+          filter: brightness(250%);
         }
       }
       .menu-list_item {

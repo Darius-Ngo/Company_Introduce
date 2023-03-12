@@ -31,12 +31,12 @@ const Footer = () => {
       )}
       <Row gutter={24}>
         <Col xs={24} sm={24} lg={12} xl={8}>
-          <div className="footer_content">
+          {/* <div className="footer_content">
             Anytime Care acknowledges the traditional owners of the lands we
             work on and would like to pay our respects to their Elders past and
             present.
           </div>
-          <img src={FgImg} alt="" width={300} />
+          <img src={FgImg} alt="" width={300} /> */}
           <div className="footer_content fw-500 mt-16">
             Subscribe to Our Newsletter
           </div>
@@ -48,22 +48,24 @@ const Footer = () => {
             />
             <button className="send-email_button">SEND</button>
           </div>
-          <div className="footer_content fw-600">ABN: 85 641 624 259</div>
-          <div className="footer_content fw-600">
+          <div className="footer_content fw-600">ABN: 13 656 767 761</div>
+          {/* <div className="footer_content fw-600">
             NDIS Registration: 4050091419
-          </div>
+          </div> */}
         </Col>
         <Col xs={24} sm={24} lg={12} xl={8}>
           <div className="title">QUICK LINKS</div>
-          {listMenu.map((item, idx) => (
-            <NavLink to={item.path} className="footer_content">
-              <div className="footer_content d-flex align-items-center">
-                <BsFillArrowRightCircleFill />
-                <div className="ml-5">{item.name}</div>
-              </div>
-            </NavLink>
-          ))}
-          <div className="d-flex align-items-center mt-8">
+          {listMenu
+            .filter((i) => !i.submenu)
+            .map((item, idx) => (
+              <NavLink to={item.path} className="footer_content">
+                <div className="footer_content d-flex align-items-center">
+                  <BsFillArrowRightCircleFill />
+                  <div className="ml-5">{item.name}</div>
+                </div>
+              </NavLink>
+            ))}
+          {/* <div className="d-flex align-items-center mt-8">
             <Tooltip title="Facebook">
               <div className="mr-12 item-social fb">
                 <FaFacebookF />
@@ -74,7 +76,7 @@ const Footer = () => {
                 <HiOutlineMail />
               </div>
             </Tooltip>
-          </div>
+          </div> */}
         </Col>
         <Col xs={24} sm={24} lg={12} xl={8}>
           <div className="title">MELBOURNE BRANCH</div>
@@ -90,7 +92,7 @@ const Footer = () => {
               className="mb-24"
             ></iframe>
           </div>
-          <a
+          {/* <a
             href="mailto:someone@example.com"
             className="footer_content fw-500 d-flex align-items-center"
           >
@@ -115,7 +117,7 @@ const Footer = () => {
             <div className="phone-contact_number">
               Mon – Fri 9:00 AM – 5:00 PM
             </div>
-          </div>
+          </div> */}
         </Col>
 
         <Col span={24} className="footer_content last-info">
