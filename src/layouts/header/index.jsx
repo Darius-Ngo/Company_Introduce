@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from "react";
+import { Select } from "antd";
+import React, { useRef, useEffect, useState } from "react";
 import { HiDevicePhoneMobile } from "react-icons/hi2";
 import { AiOutlineMail } from "react-icons/ai";
 import { WrapHeader } from "./styled";
@@ -56,6 +57,7 @@ export const listMenu = [
 const Header = () => {
   const headerRef = useRef();
   const location = useLocation();
+  const [language, setLanguage] = useState();
   useEffect(() => {
     const shrinkHeader = () => {
       if (
@@ -72,6 +74,10 @@ const Header = () => {
       window.removeEventListener("scroll", shrinkHeader);
     };
   }, []);
+  useEffect(() => {
+    setLanguage(localStorage.getItem("language") || "en");
+  }, [localStorage.getItem("language")]);
+
   return (
     <WrapHeader>
       <div className="top-header d-flex justify-content-between align-items-center padding-app">
@@ -94,6 +100,17 @@ const Header = () => {
             <HiDevicePhoneMobile className="mr-8" />
             <div className="phone-contact_number">+61 042 6126 879</div>
           </a>
+          {/* <Select
+            value={language}
+            className="ml-16"
+            onChange={(val) => {
+              localStorage.setItem("language", val);
+              window.location.reload();
+            }}
+          >
+            <Select.Option value="en">English</Select.Option>
+            <Select.Option value="vi">Tiếng Việt</Select.Option>
+          </Select> */}
         </div>
       </div>
       <div className="header-content">
