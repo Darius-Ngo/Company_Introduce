@@ -100,13 +100,13 @@ export const StyledHomePage = styled.div`
       .content-bg-title {
         font-size: 50px;
         font-weight: 600;
-        color: #fff;
+        color: #faad14;
         margin-bottom: 24px;
       }
       .content-bg-label {
-        width: 40%;
+        width: 60%;
         font-size: 20px;
-        color: #fff;
+        color: #faad14;
         margin-bottom: 24px;
       }
     }

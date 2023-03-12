@@ -6,11 +6,13 @@ import NotFound from "./../pages/NotFound";
 import Home from "./../pages/Home";
 import ABOUT from "./../pages/About";
 import NewList from "src/pages/News";
+import Detail from "src/pages/News/Detail";
 import ContactUsPage from "./../pages/ContactUs";
 import Header from "../layouts/header";
 import Footer from "./../layouts/footer";
 import Reviews from "src/pages/Reviews";
 import MakeAReferral from "src/pages/MakeAReferral";
+import Services from "src/pages/Services";
 
 function LazyLoadingComponent({ children }) {
   return (
@@ -96,13 +98,30 @@ const AppRouter = () => {
         }
       />
       <Route
-        path={ROUTER.SERVICES}
+        path={ROUTER.DETAILNEW}
         element={
           <LazyLoadingComponent>
-            <ABOUT />
+            <Detail />
           </LazyLoadingComponent>
         }
       />
+      <Route
+        path={ROUTER.SERVICES}
+        element={
+          <LazyLoadingComponent>
+            <Services />
+          </LazyLoadingComponent>
+        }
+      />
+      <Route
+        path={ROUTER.HOMESERVICES}
+        element={
+          <LazyLoadingComponent>
+            <Home />
+          </LazyLoadingComponent>
+        }
+      />
+
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

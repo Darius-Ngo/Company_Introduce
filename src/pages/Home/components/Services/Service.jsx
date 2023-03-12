@@ -140,13 +140,19 @@ class PicDetailsDemo extends React.Component {
               </>
             )}
             <img
-              // onmouseover={() => {}}
+              onMouseOver={(e) => {
+                this.onImgClick(e, i);
+              }}
+              // onMouseOut={(e) => {
+              //   this.onClose(e, i);
+              // }}
               className="img-item-hover"
               src={image}
               alt={""}
               width="100%"
               height="100%"
               style={{
+                cursor: "pointer",
                 objectFit: "cover",
                 borderRadius: isOpen ? "0px" : "5px",
               }}

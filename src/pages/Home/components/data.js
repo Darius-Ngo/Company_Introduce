@@ -8,6 +8,7 @@ import img7 from "src/access/img/services/7.jpg";
 import img8 from "src/access/img/services/8.webp";
 import img9 from "src/access/img/services/9.jpg";
 import img10 from "src/access/img/services/10.jpg";
+import img11 from "src/access/img/services/11.webp";
 
 export const imgArrayOffice = [
   {
@@ -49,46 +50,37 @@ export const imgArrayOffice = [
 ];
 
 export const textData = [
-  {
-    title: "Supported Independent Living",
-    content: `Supported Independent 
-    Living is one type of help or supervision with daily tasks to help you live as independently as possible, 
-    while building your skills.  
-    Our qualified professionals are adept in helping participants with various tasks, 
-    irrespective of their disabilities. So, you can expect all-inclusive support from them. 
-    Moreover, they will guide you in developing the skills required to accomplish different tasks without requiring additional guidance.`,
-  },
+  // {
+  //   title: "Supported Independent Living",
+  //   content: `Supported Independent
+  //   Living is one type of help or supervision with daily tasks to help you live as independently as possible,
+  //   while building your skills.
+  //   Our qualified professionals are adept in helping participants with various tasks,
+  //   irrespective of their disabilities. So, you can expect all-inclusive support from them.
+  //   Moreover, they will guide you in developing the skills required to accomplish different tasks without requiring additional guidance.`,
+  // },
   {
     title: "Respite Accommodation",
     content: `Supported Independent 
-    Respite, we focus on enabling people with disabilities to be independent and achieve their goals in a supportive environment.
-We provide respite accommodation, which is a great place to meet people, enjoy activities and have the support of fully qualified staff to support your daily living needs. Our homes are purpose-built, fully accessible and fitted with appropriate assistive technologies and supported by highly trained and qualified staff.
+    At Heart and Virtue, we understand that caring for a loved one with a disability can be challenging and overwhelming at times. That's why we offer a Respite Accommodation service that provides short-term accommodation and support for individuals with disabilities, giving their caregivers a much-needed break. Our team of caring professionals provides personalized care and support, tailored to meet the unique needs of each of our clients. Whether it's for a few days or a few weeks, our warm and welcoming respite accommodation provides a safe and supportive environment for individuals with disabilities to relax, recharge, and participate in a range of fun and engaging activities. With our warm heart and warm hands approach, we strive to make respite accommodation a positive and rejuvenating experience for everyone involved.
+ 
 `,
   },
   {
     title: "Support Coordination",
-    content: `At Heart and Virtue, our well-trained and highly qualified Support Coordinators will provide you with support that is impartial and tailored to your individual needs. 
-    Your Heart and Virtue Support Coordinator will provide support uniquely suited to you, to build your confidence and capacity to manage your plan going forward
-    `,
-  },
-  {
-    title: "Community Participation",
-    content: `Take part and go shopping, movies, theatre, swimming, gym, riding, walk along the beach, enjoy a nice coffee, visit clubs and parks, sporting and more ...
- 
-    We know that people have busy lives and therefore an essential service is supported to access various activities in the community including social and recreational. 
-     
-    Support is individual and customised to your needs and activity; however, the aim of the support is always to add value to your experience of life and self-determination. Whether it’s going to a doctor’s appointment, getting to work, playing sports or seeing a movie we believe that it is important that people are able to participate fully in life and activities of their choice.
-    `,
+    content: `At Heart and Virtue, we understand that navigating the disability support system can be complex and overwhelming. That's why we offer a Support Coordination service that provides personalized assistance to help individuals with disabilities and their families access the services and supports they need. Our experienced support coordinators work closely with our clients to develop tailored support plans that meet their unique needs and goals. We provide assistance with service coordination, advocacy, and decision-making, and we are committed to empowering our clients to make informed choices and achieve their desired outcomes. With our warm heart and warm hands approach, we strive to make the support coordination process a positive and empowering experience for everyone involved.`,
   },
   {
     title: "Group & Centre-Based Activities",
-    content: `Heart and Virtue focus on rendering quality services and excellent support to the community in the country. We aim to lend a helping hand to differently abled people and help them in improving their morality, independence, and mobility through our NDIS social activities. Through our various programs rendered by trained professionals, we cater to the mental and physical well- being of our participants. Hear and Virtue is led by experts from the field that approach and attend to our participants with the utmost care and empathy, meanwhile ensuring that they are helped in all possible ways.
-    `,
+    content: `At Heart and Virtue, we believe that social inclusion and participation are essential to overall well-being and quality of life. That's why we offer a Group and Centre-Based Activities service that provides a range of fun and engaging activities for individuals with disabilities to participate in. Our experienced staff members facilitate a variety of activities, including arts and crafts, cooking, games, music, and outings. We work closely with our clients to ensure that our activities are tailored to their interests and abilities, and we strive to create a welcoming and inclusive environment where everyone feels comfortable and supported. With our warm heart and warm hands approach, we are committed to empowering individuals with disabilities to participate in the community and develop new skills, friendships, and experiences.`,
+  },
+  {
+    title: "Career Orientation and Job Training",
+    content: `At Heart and Virtue, we believe that everyone deserves the opportunity to reach their full potential, including in the workplace. That's why we offer a Career Orientation and Job Training service that provides personalized support to individuals with disabilities who are seeking employment or career development opportunities. Our experienced job coaches provide one-on-one support with resume writing, job searching, interview skills, and workplace skills development. We also offer group workshops and training programs to help our clients build their skills and confidence in a variety of areas. With our warm heart and warm hands approach, we are committed to empowering individuals with disabilities to achieve their career goals and reach their full potential in the workforce.`,
   },
   {
     title: "Household Tasks",
-    content: `Due to their limited mobility, many individuals with disabilities cannot clean their homes on their own. At Heart and Virtue, we offer household help for disabled individuals which includes basic cleaning in kitchens, bedrooms, bathrooms, laundry rooms, and toilets. We take care of all the needs and domestic activities that NDIS participants cannot do on their own. Cleaning and laundry, house maintenance, gardening and landscaping, food preparation, dishwashing, ironing, new linen, banking and shopping, meal delivery, and assistance with specialist equipment are duties that are usually assigned to our team. We help participants in creating and maintaining a healthy, safe, and enjoyable living environment. A tidy home is an essential aspect of ensuring general well-being. Heart and Virtue is here to offer reliable assistance for NDIS household tasks.
-    `,
+    content: `At Heart and Virtue, we understand that household tasks can be challenging for individuals with disabilities, and we are here to help. Our Household Tasks service provides assistance with a range of tasks, including cleaning, laundry, meal preparation, and grocery shopping. Our experienced support workers work closely with our clients to develop a personalized plan that meets their unique needs and preferences. We strive to create a warm and supportive environment where our clients feel comfortable and empowered to live independently in their own homes. With our warm heart and warm hands approach, we are committed to providing compassionate and professional support that helps our clients to maintain their independence and improve their quality of life.`,
   },
   {
     title: "Medication Management",
@@ -96,25 +88,33 @@ We provide respite accommodation, which is a great place to meet people, enjoy a
       '<p dir="ltr">That&rsquo;s where Heart and Virtue&nbsp; comes in. Trained caregivers can:</p>\n<ul>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Provide medication reminders</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Ensure medication directions are followed such as taking with food or a certain time of day</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Check expiration dates</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Provide transportation to pick up prescriptions and over-the-counter medications or to speak with the pharmacist&nbsp;</p>\n</li>\n</ul>\n<p dir="ltr">Medication reminders are just one of the many ways Heart and Virtue can help you or a loved one live their best life possible.</p>',
   },
   {
-    title: "Travel & Transport",
-    content: `<p dir="ltr">Heart and Virtue provides Travel and Transport Assistance for NDIS participants to achieve their plan goals. Participants generally access funding through NDIS for transport assistance if they can&rsquo;t use public transport without substantial difficulty due to disability.&nbsp;&nbsp;</p>\n<p dir="ltr">Travel assistance allows participants to complete daily tasks and meets their need to live a sustainable life.</p>\n<p dir="ltr">Heart and Virtue can help you improve your daily living, including the following tasks:</p>\n<ul>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Learn to use public transport,</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Go grocery shopping with your Support Worker,</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Visit your local chemist to pick up your prescriptions,</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Attend your appointments,</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Get involved in your community by attending events, groups, or clubs,</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Visit the park or library.</p>\n</li>\n</ul>`,
+    title: "Travel and Transport",
+    content: `At Heart and Virtue, we understand that transportation can be a major barrier to independence and social participation for individuals with disabilities. That's why we offer a Travel and Transport service that provides safe, reliable, and accessible transportation to our clients. Our experienced support workers work closely with our clients to develop a personalized travel plan that meets their unique needs and preferences. Whether it's transportation to medical appointments, social outings, or daily activities, our clients can rely on us to provide compassionate and professional support that helps them to live their best life. With our warm heart and warm hands approach, we are committed to empowering our clients to access the community and enjoy all the activities they love without worrying about transportation barriers.`,
   },
   {
     title: "Personal Care",
-    content: `<p dir="ltr">Care and support with personal needs such as washing or showering, grooming, dressing, walking or mobility, or a companion with personal outings. We provide personalised care that is personal to you. Some examples of personal care services include assistance with:</p>\n<ul>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Bathing</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Toileting</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Dressing</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Grooming</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Eating and meal prep</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Medication reminders</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Mobility</p>\n</li>\n</ul>`,
+    content: `At Heart and Virtue, we understand that personal care needs can be unique and require sensitive and individualized support. Our Personal Care service is designed to provide compassionate and professional support to our clients to help them maintain their personal hygiene, grooming, and dressing needs. Our experienced support workers work closely with our clients and their healthcare providers to develop a personalized care plan that meets their unique needs and preferences. We prioritize the comfort, dignity, and well-being of our clients and are committed to providing respectful and empowering support that promotes independence and self-confidence. With our warm heart and warm hands approach, we strive to make personal care as comfortable, efficient, and pleasant as possible for our clients so that they can focus on living their best life.`,
   },
   {
     title: "Development Skilled",
-    content:
-      '<p dir="ltr">Develop skills which will assist you to build a positive future. Our group day service and post school options offer a wide range of program options which allow you to learn skills, pursue your interests, build confidence and increase your independence.</p>\n<p dir="ltr">Individual Skills Development and Training includes, but are not limited to-</p>\n<ul>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Public transport training and support</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Money handling skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Developing skills for community, social and recreational participation</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Developing skills for road safety</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Developing decision making skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Improving social interaction and communication skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Improved decision making skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Problem solving skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Personal hygiene skills</p>\n</li>\n<li dir="ltr" aria-level="1">\n<p dir="ltr" role="presentation">Literacy and Numeracy skills</p>\n</li>\n</ul>',
+    content: `At Heart and Virtue, we understand the importance of empowering individuals with disabilities to develop the skills they need to achieve their goals and reach their full potential. Our Skills Development service is designed to provide our clients with personalized and professional support to develop their communication, social, cognitive, and vocational skills. Our experienced support workers work closely with our clients to identify their unique strengths, interests, and needs and develop a customized plan to help them develop new skills and enhance their existing ones. Whether it's learning a new language, improving communication skills, or developing work-related skills, we are committed to providing compassionate, supportive, and goal-oriented services that promote our clients' independence and well-being. With our warm heart and warm hands approach, we strive to create a positive and engaging environment where our clients can learn, grow, and thrive.`,
+  },
+  {
+    title: "Community Participation",
+    content: `Take part and go shopping, movies, theatre, swimming, gym, riding, walk along the beach, enjoy a nice coffee, visit clubs and parks, sporting and more ...
+ 
+    We know that people have busy lives and therefore an essential service is supported to access various activities in the community including social and recreational
+`,
   },
 ];
 
 export const dataArrayImg = [
-  { image: img1 },
+  // { image: img1 },
   { image: img2 },
   { image: img3 },
   { image: img4 },
+  { image: img11 },
+
   { image: img5 },
   { image: img6 },
   { image: img7 },

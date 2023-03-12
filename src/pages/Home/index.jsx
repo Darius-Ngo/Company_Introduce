@@ -1,5 +1,6 @@
 import { Button, Col, Divider, Form, Input, Row } from "antd";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import wu2 from "src/access/img/services/wu2.png";
 import { getRegexEmail, getRegexMobile } from "../MakeAReferral";
 import CustomerReviewItem from "../Reviews/components/CustomerReviewItem";
@@ -9,74 +10,21 @@ import News from "./components/News/News";
 import PicDetailsDemo from "./components/Services/Service";
 import { StyledHomePage } from "./styled";
 
-// const StyledHomePage = styled.div`
-//   .my-office {
-//     .my-office-title {
-//       font-size: 23px;
-//       margin: 20px auto;
-//       font-weight: bold;
-//       text-align: center;
-//     }
-//   }
-//   .why-us {
-//     height: 100vh !important;
-//     background: #fff;
-//   }
-//   .video-bg {
-//     position: relative;
-//     video {
-//       width: 100%;
-//       height: calc(100vh - 44px);
-//       object-fit: cover;
-//     }
-//     .content-bg {
-//       position: absolute;
-//       left: 10%;
-//       top: 40%;
-//       .ant-btn {
-//         padding: 10px 15px;
-//         text-align: center;
-//         height: 50px !important;
-//         background: #000064;
-//         :hover {
-//           background: #015ee1;
-//           transform: translateY(-10px);
-//           box-shadow: 0px 5px 30px rgba(0, 174, 255, 0.692);
-//         }
-//       }
-//       .content-bg-title {
-//         font-size: 50px;
-//         font-weight: 600;
-//         color: #fff;
-//         margin-bottom: 24px;
-//       }
-//       .content-bg-label {
-//         width: 40%;
-//         font-size: 20px;
-//         color: #fff;
-//         margin-bottom: 24px;
-//       }
-//     }
-//     :before {
-//       content: "";
-//       position: absolute;
-//       /* top: ${({ theme }) => `${theme.headerTopHeight};`}; */
-//       top: 0px;
-//       left: 0;
-//       right: 0;
-//       bottom: 0;
-
-//       background: #0000004d;
-//     }
-//   }
-// `;
-
 const HomePage = () => {
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0 });
-  }, []);
+  const location = useLocation();
   const [form] = Form.useForm();
-
+  const service = useRef();
+  useEffect(() => {
+    // if (location?.pathname === "/home/service") scrollDown();
+    // else
+    window.scrollTo({ top: 0, left: 0 });
+  }, [location]);
+  const scrollDown = () => {
+    window.scrollTo({
+      top: service.current.offsetTop - 20,
+      behavior: "smooth",
+    });
+  };
   return (
     <StyledHomePage>
       <div className="video-bg">
@@ -91,22 +39,26 @@ const HomePage = () => {
         <div className="content-bg">
           <div className="content-bg-title">Warm heart & Warm hands</div>
           <div className="content-bg-label">
-            We focus on empowering individuals, encourage them to develop skills
-            for daily life and healthy relationships, as well as supporting them
-            to boost their confidence every day.
+            We put our hearts, our professional and conscientious care in a
+            generation to ensure people live happier, healthier and more
+            meaningful lives.We focus on empowering individuals, encouraging
+            them to develop skills for daily life and healthy relationships, as
+            well as supporting them to boost their confidence every day.
           </div>
           <Button>GET STARTED</Button>
         </div>
       </div>
-      <PicDetailsDemo />
-      <News />
-      <div className="my-office">
+      {/* <div ref={service}>
+        <PicDetailsDemo />
+      </div> */}
+      {/* <News /> */}
+      {/* <div className="my-office">
         <div className="my-office-title">OUR CORPORATE OFFICE</div>
         <div>
           <Banner imgArray={imgArrayOffice} />
         </div>
-      </div>
-      <div className="customer-review">
+      </div> */}
+      {/* <div className="customer-review">
         <div className="customer-review-header">
           <div className="customer-review-title">Customer Reviews</div>
           <div className="customer-review-see-all">{"See all >>"}</div>
@@ -135,7 +87,7 @@ const HomePage = () => {
             </div>
           </Col>
         </Row>
-      </div>
+      </div> */}
       <div className="why-us">
         <Row gutter={16}>
           {/* <Col span={10}>
