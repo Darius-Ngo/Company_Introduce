@@ -81,12 +81,9 @@ const Header = () => {
   return (
     <WrapHeader>
       <div className="top-header d-flex justify-content-between align-items-center padding-app">
-        <div className="top-header_slogan">Heart and Virtue</div>
+        <div className="top-header_slogan">HEART AND VIRTUE</div>
         <div className="top-header_contact d-flex align-items-center">
-          <a href="tel: +61 042 6126 879" className="contact-info mr-8">
-            Melbourne: +61 042 6126 879
-          </a>
-          <div className="mr-12 divider" />
+          {/* <div className="mr-12 divider" /> */}
           <a
             href="mailto:someone@example.com"
             className="contact-info d-flex align-items-center"
@@ -94,11 +91,11 @@ const Header = () => {
             <AiOutlineMail className="mr-8" /> info@heartandvitue.com.au
           </a>
           <a
-            href="tel: +61 042 6126 879"
+            href="tel: +610426126879"
             className="phone-contact d-flex align-items-center"
           >
             <HiDevicePhoneMobile className="mr-8" />
-            <div className="phone-contact_number">+61 042 6126 879</div>
+            <div className="phone-contact_number">(+61) 426 126 879</div>
           </a>
           {/* <Select
             value={language}

@@ -3,6 +3,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { AiFillClockCircle } from "react-icons/ai";
 import { MdPhoneIphone } from "react-icons/md";
 import { Row, Col, Input, Select, DatePicker, Form } from "antd";
+import bgr from "src/access/img/contact_us.jpg";
 import { ContactPageStyle } from "./styled";
 import { WrapHeader } from "src/layouts/header/styled";
 
@@ -81,7 +82,10 @@ const ContactUsPage = () => {
   return (
     <>
       <WrapHeader>
-        <div className="slogan d-flex align-items-center justify-content-center">
+        <div
+          className="slogan d-flex align-items-center justify-content-center"
+          style={{ backgroundImage: `url(${bgr})` }}
+        >
           <h2>Warm heart - Warms hands</h2>
         </div>
       </WrapHeader>

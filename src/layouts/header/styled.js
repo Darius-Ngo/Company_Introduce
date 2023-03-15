@@ -147,9 +147,9 @@ export const WrapHeader = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    clip-path: circle(170vh at 50% -80vh);
+    clip-path: circle(170vh at 50% -116vh);
     h2 {
-      color: ${({ theme }) => `${theme.white};`};
+      color: ${({ theme }) => `${theme.warmYellow};`};
       font-size: 40px;
     }
   }

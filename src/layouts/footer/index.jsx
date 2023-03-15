@@ -1,18 +1,10 @@
-import {
-  BsFillArrowRightCircleFill,
-  BsFillTelephoneFill,
-} from "react-icons/bs";
-import { FaEnvelopeOpenText, FaFacebookF } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5";
-import { AiFillClockCircle } from "react-icons/ai";
-import { HiOutlineMail } from "react-icons/hi";
-import { Row, Col, Tooltip } from "antd";
+import { Col, Row } from "antd";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { NavLink, useLocation } from "react-router-dom";
-import { WrapFooter } from "./styled";
 import logoImg from "../../access/img/logo.png";
-import FgImg from "../../access/img/fg.jpg";
 import { listMenu } from "../header";
 import ROUTER from "./../../routers/router";
+import { WrapFooter } from "./styled";
 
 const Footer = () => {
   const location = useLocation();
