@@ -11,6 +11,7 @@ import MELBOURNE from "src/access/img/new/MELBOURNE.png";
 import Moomba from "src/access/img/new/Moonba.png";
 import pet from "src/access/img/new/pet.png";
 import vocher from "src/access/img/new/vocher.jpg";
+import logo from "src/access/img/news.jpg";
 export const dataNew = [
   {
     id: "1",
@@ -101,16 +102,19 @@ const NewList = () => {
 
   return (
     <StyledNewList>
-      <WrapAboutPage>
-        <WrapHeaderNews>
-          <div className="slogan d-flex align-items-center justify-content-center">
-            <h2>NEWS</h2>
-          </div>
-        </WrapHeaderNews>
-      </WrapAboutPage>
-      <div className="news-re">
-        <div className="news-ab">
-          {/* <div className="news-one">
+      <WrapHeader>
+        <div
+          className="slogan d-flex align-items-center justify-content-center"
+          style={{ backgroundImage: `url(${logo})` }}
+        >
+          <h2>NEWS</h2>
+        </div>
+      </WrapHeader>
+
+      <WrapAboutPage className="page-common">
+        <div className="news-re">
+          <div className="news-ab">
+            {/* <div className="news-one">
             <div className="div-new-item">
               <div className="new-item">
                 <div className="new-img">
@@ -153,14 +157,14 @@ const NewList = () => {
               </div>
             </div>
           </div> */}
-          <Row gutter={[16, 16]} style={{ padding: "0px 24px" }}>
-            {dataNew?.map((item, idx) => (
-              <Col span={8}>
-                <NewsItem key={idx} newId={item.id} />
-              </Col>
-            ))}
-          </Row>
-          {/* <Row style={{ display: "flex", justifyContent: "flex-end" }}>
+            <Row gutter={[16, 16]} style={{ padding: "0px 24px" }}>
+              {dataNew?.map((item, idx) => (
+                <Col span={8}>
+                  <NewsItem key={idx} newId={item.id} />
+                </Col>
+              ))}
+            </Row>
+            {/* <Row style={{ display: "flex", justifyContent: "flex-end" }}>
             <Pagination
               current={1}
               pageSize={20}
@@ -168,8 +172,9 @@ const NewList = () => {
               onChange={() => {}}
             />
           </Row> */}
+          </div>
         </div>
-      </div>
+      </WrapAboutPage>
     </StyledNewList>
   );
 };

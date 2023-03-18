@@ -5,11 +5,12 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { dataNew } from ".";
 import { WrapAboutPage } from "../About/styled";
-import { WrapHeaderNews } from "./styled";
+import { WrapHeader } from "src/layouts/header/styled";
+import logo from "src/access/img/news.jpg";
 const DetailNewStyle = styled.div`
   .new-detail {
-    position: relative;
-    top: -220px;
+    /* position: relative;
+    top: -220px; */
     padding: 24px 50px;
     color: #000;
     .new-title {
@@ -91,55 +92,59 @@ const Detail = () => {
   console.log(item);
   return (
     <DetailNewStyle>
-      <WrapAboutPage>
-        <WrapHeaderNews>
-          <div className="slogan d-flex align-items-center justify-content-center">
-            <h2>NEWS</h2>
-          </div>
-        </WrapHeaderNews>
-      </WrapAboutPage>
-      <div className="new-detail">
-        <Divider />
-        <div className="new-title">{item?.title}</div>
-        <div className="fl">
-          <div className="new-content">
-            <div
-              className="new-content"
-              dangerouslySetInnerHTML={{
-                __html: item?.content,
-              }}
-            />
-          </div>
-          {item?.img && (
-            <div className="new-img">
-              <img src={item?.img} alt="" />
-
-              <div className="div-link">
-                <div className="link">
-                  <a
-                    href={item?.linknew}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ cursor: "pointer" }}
-                    onClick={(e) => {
-                      e?.stopPropagation();
-                    }}
-                  >
-                    <img src={linkIcon} alt="link" />
-                  </a>
-                </div>
-                <div
-                  className="new-name max-line1"
-                  style={{ padding: "0px 20px" }}
-                >
-                  {item?.title}
-                </div>
-                <div className="new-name max-line1">News</div>
-              </div>
-            </div>
-          )}
+      <WrapHeader>
+        <div
+          className="slogan d-flex align-items-center justify-content-center"
+          style={{ backgroundImage: `url(${logo})` }}
+        >
+          <h2>NEWS</h2>
         </div>
-      </div>
+      </WrapHeader>
+
+      <WrapAboutPage className="page-common">
+        <div className="new-detail">
+          <div className="new-title">{item?.title}</div>
+          <Divider />
+          <div className="fl">
+            <div className="new-content">
+              <div
+                className="new-content"
+                dangerouslySetInnerHTML={{
+                  __html: item?.content,
+                }}
+              />
+            </div>
+            {item?.img && (
+              <div className="new-img">
+                <img src={item?.img} alt="" />
+
+                <div className="div-link">
+                  <div className="link">
+                    <a
+                      href={item?.linknew}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{ cursor: "pointer" }}
+                      onClick={(e) => {
+                        e?.stopPropagation();
+                      }}
+                    >
+                      <img src={linkIcon} alt="link" />
+                    </a>
+                  </div>
+                  <div
+                    className="new-name max-line1"
+                    style={{ padding: "0px 20px" }}
+                  >
+                    {item?.title}
+                  </div>
+                  <div className="new-name max-line1">News</div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </WrapAboutPage>
     </DetailNewStyle>
   );
 };

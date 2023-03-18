@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
 export const StyledSevices = styled.div`
-  /* .img-item-hover {
+  .div-img-hover {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  .img-item-hover {
     cursor: pointer;
+    transition: all 1s ease-in;
     :hover {
-      filter: blur(1px);
-
-      box-shadow: 0px 1px 3px rgba(0, 81, 139, 1);
+      transform: scale(1.3);
     }
-  } */
+  }
   .scrollbar {
     float: left;
     overflow-y: scroll;

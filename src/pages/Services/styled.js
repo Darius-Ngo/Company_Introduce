@@ -2,7 +2,7 @@ import styled from "styled-components";
 import logo from "src/access/img/logo.png";
 export const WrapHeaderServices = styled.div`
   .top-header {
-    background-color: ${({ theme }) => `${theme.black};`};
+    background-color: ${({ theme }) => `${theme.primaryColor};`};
     color: ${({ theme }) => `${theme.white};`};
     height: ${({ theme }) => `${theme.headerTopHeight};`};
     .contact-info {
@@ -16,14 +16,14 @@ export const WrapHeaderServices = styled.div`
     }
     .phone-contact {
       margin-left: 16px;
-      padding: 0 20px;
+      padding: 0 16px;
       border-radius: 30px;
       background-color: ${({ theme }) => `${theme.white};`};
-      color: ${({ theme }) => `${theme.black};`};
+      color: ${({ theme }) => `${theme.primaryColor};`};
       &_number {
-        padding: 11px 8px;
-        color: ${({ theme }) => `${theme.black};`};
-        border-left: 1px solid ${({ theme }) => `${theme.black};`};
+        padding: 7px 8px;
+        color: ${({ theme }) => `${theme.primaryColor};`};
+        border-left: 1px solid ${({ theme }) => `${theme.primaryColor};`};
         font-weight: 500;
       }
     }
@@ -38,8 +38,7 @@ export const WrapHeaderServices = styled.div`
       height: ${({ theme }) => `${theme.headerContentHeight};`};
       background-color: transparent;
       transition: all 0.3s ease-in-out;
-      color: ${({ theme }) => `${theme.white};`};
-      color: ${({ theme }) => `${theme.textColor};`};
+      color: ${({ theme }) => `${theme.primaryColor};`};
       &.shrink {
         height: ${({ theme }) => `${theme.headerShrinkHeight};`};
         position: fixed;
@@ -48,10 +47,15 @@ export const WrapHeaderServices = styled.div`
         right: 0;
         background-color: ${({ theme }) => `${theme.white};`};
         box-shadow: rgb(0 0 0 / 12%) 0 1px 3px;
-        color: ${({ theme }) => `${theme.textColor};`};
+        color: ${({ theme }) => `${theme.primaryColor};`};
         .menu-list_item {
           &::before {
-            background-color: ${({ theme }) => `${theme.textColor};`};
+            background-color: ${({ theme }) => `${theme.primaryColor};`};
+          }
+        }
+        .logo-web {
+          img {
+            filter: brightness(150%);
           }
         }
       }
@@ -60,8 +64,11 @@ export const WrapHeaderServices = styled.div`
       }
       .logo-web {
         height: 100%;
+        display: flex;
+        align-items: center;
         img {
-          height: 100%;
+          height: 70%;
+          filter: brightness(250%);
         }
       }
       .menu-list_item {
@@ -76,9 +83,8 @@ export const WrapHeaderServices = styled.div`
           left: 50%;
           width: 0;
           height: 3px;
-          background-color: ${({ theme }) => `${theme.white};`};
+          background-color: ${({ theme }) => `${theme.primaryColor};`};
           transition: all 0.3s ease-in;
-          background-color: ${({ theme }) => `${theme.textColor};`};
         }
         &.active,
         &:hover {
@@ -101,7 +107,7 @@ export const WrapHeaderServices = styled.div`
           background-color: ${({ theme }) => `${theme.white};`};
           display: flex;
           flex-wrap: wrap;
-          width: 550px;
+          width: 600px;
           opacity: 0;
           transition: all 0.4s ease-in-out;
           pointer-events: none;
@@ -140,9 +146,9 @@ export const WrapHeaderServices = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    clip-path: circle(170vh at 50% -120vh);
+    clip-path: circle(170vh at 50% -116vh);
     h2 {
-      color: ${({ theme }) => `${theme.white};`};
+      color: ${({ theme }) => `${theme.warmYellow};`};
       font-size: 40px;
     }
   }

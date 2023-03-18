@@ -139,24 +139,26 @@ class PicDetailsDemo extends React.Component {
                 </Tooltip>
               </>
             )}
-            <img
-              onMouseOver={(e) => {
-                this.onImgClick(e, i);
-              }}
-              // onMouseOut={(e) => {
-              //   this.onClose(e, i);
-              // }}
-              className="img-item-hover"
-              src={image}
-              alt={""}
-              width="100%"
-              height="100%"
-              style={{
-                cursor: "pointer",
-                objectFit: "cover",
-                borderRadius: isOpen ? "0px" : "5px",
-              }}
-            />
+            <div className="div-img-hover">
+              <img
+                // onMouseOver={(e) => {
+                //   this.onImgClick(e, i);
+                // }}
+                // onMouseOut={(e) => {
+                //   this.onClose(e, i);
+                // }}
+                className="img-item-hover"
+                src={image}
+                alt={""}
+                width="100%"
+                height="100%"
+                style={{
+                  cursor: "pointer",
+                  objectFit: "cover",
+                  borderRadius: isOpen ? "0px" : "5px",
+                }}
+              />
+            </div>
           </TweenOne>
           <TweenOneGroup
             enter={[
