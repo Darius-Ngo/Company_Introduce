@@ -147,6 +147,7 @@ export const WrapHeader = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: bottom;
     clip-path: circle(170vh at 50% -116vh);
     h2 {
       color: ${({ theme }) => `${theme.warmYellow};`};

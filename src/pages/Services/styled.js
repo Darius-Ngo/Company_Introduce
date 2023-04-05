@@ -145,6 +145,7 @@ export const WrapHeaderServices = styled.div`
     background-image: ${({ theme }) => `url(${logo});`};
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
     background-attachment: fixed;
     clip-path: circle(170vh at 50% -116vh);
     h2 {
