@@ -78,7 +78,7 @@ export const StyledHomePage = styled.div`
   .video-bg {
     video {
       width: 100%;
-      height: calc(100vh - 44px);
+      height: calc(100vh - 51px);
       object-fit: cover;
     }
     .content-bg {

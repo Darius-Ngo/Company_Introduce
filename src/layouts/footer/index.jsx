@@ -12,15 +12,13 @@ const Footer = () => {
 
   return (
     <WrapFooter
-      className={
-        location.pathname === ROUTER.HOME ? "clip_path" : "pt-36 mt-20"
-      }
+      className={location.pathname === ROUTER.HOME ? "pt-36" : "pt-36 mt-20"}
     >
-      {location.pathname === ROUTER.HOME && (
+      {/* {location.pathname === ROUTER.HOME && (
         <div className="logo d-flex align-items-center justify-content-center">
           <img src={logoImg} alt="" width={300} />
         </div>
-      )}
+      )} */}
       <Row gutter={24}>
         <Col xs={24} sm={24} lg={12} xl={8}>
           {/* <div className="footer_content">
