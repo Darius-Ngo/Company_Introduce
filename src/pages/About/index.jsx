@@ -50,7 +50,7 @@ const AboutPage = () => {
           we can exceed expectations and make a meaningful difference in the
           lives of those we support.
         </div>
-        <div className="subtitle mt-20">Who are Heart and Virtue together?</div>
+        <div className="subtitle mt-20">WHO ARE HEART AND VIRTUE TOGETHER?</div>
         <div className="content">
           Our company is highly skilled in providing support to individuals with
           complex needs, which may include autism, mental health conditions, and

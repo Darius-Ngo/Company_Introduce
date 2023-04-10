@@ -28,20 +28,22 @@ const HomePage = () => {
   };
   return (
     <StyledHomePage>
-      <div className="video-bg">
-        <video playsinline autoplay="" muted loop>
-          <source src={videoBanner} type={"video/mp4"} />
-        </video>
-        <div className="content-bg">
-          <div className="content-bg-title">Warm heart & Warm hands</div>
-          <div className="content-bg-label">
-            We put our hearts, our professional and conscientious care in a
-            generation to ensure people live happier, healthier and more
-            meaningful lives.We focus on empowering individuals, encouraging
-            them to develop skills for daily life and healthy relationships, as
-            well as supporting them to boost their confidence every day.
+      <div style={{ height: "calc(100vh - 44px)", overflow: "hidden" }}>
+        <div className="video-bg">
+          <video playsinline autoplay="" muted loop>
+            <source src={videoBanner} type={"video/mp4"} />
+          </video>
+          <div className="content-bg">
+            <div className="content-bg-title">Warm heart & Warm hands</div>
+            <div className="content-bg-label">
+              We put our hearts, our professional and conscientious care in a
+              generation to ensure people live happier, healthier and more
+              meaningful lives.We focus on empowering individuals, encouraging
+              them to develop skills for daily life and healthy relationships,
+              as well as supporting them to boost their confidence every day.
+            </div>
+            {/* <Button>GET STARTED</Button> */}
           </div>
-          <Button>GET STARTED</Button>
         </div>
       </div>
       {/* <div ref={service}>
