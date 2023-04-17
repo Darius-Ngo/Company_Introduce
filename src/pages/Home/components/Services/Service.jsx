@@ -55,24 +55,24 @@ class PicDetailsDemo extends React.Component {
   };
 
   getDelay = (e) => {
-    const i = e.index + (dataArray.length % 4);
-    return (i % 4) * 100 + Math.floor(i / 4) * 100 + 200;
+    const i = e.index + (dataArray.length % 3);
+    return (i % 3) * 100 + Math.floor(i / 3) * 100 + 200;
   };
 
   getLiChildren = () => {
-    const imgWidth = 220;
-    const imgHeight = 152;
-    const imgBoxWidth = 260;
-    const imgBoxHeight = 192;
+    const imgWidth = 293;
+    const imgHeight = 203;
+    const imgBoxWidth = 347;
+    const imgBoxHeight = 256;
     return dataArray.map((item, i) => {
       const { image, title, content } = item;
       const isEnter = typeof this.state.picOpen[i] === "boolean";
       const isOpen = this.state.picOpen[i];
 
-      const left = isEnter ? 0 : imgBoxWidth * (i % 4);
-      const imgLeft = isEnter ? imgBoxWidth * (i % 4) : 0;
-      const isRight = Math.floor((i % 4) / 2);
-      const isTop = Math.floor(i / 4);
+      const left = isEnter ? 0 : imgBoxWidth * (i % 3);
+      const imgLeft = isEnter ? imgBoxWidth * (i % 3) : 0;
+      const isRight = !!Math.floor((i % 3) / 2);
+      const isTop = Math.floor(i / 3);
       let top = isTop ? (isTop - 1) * imgBoxHeight : 0;
       top = isEnter ? top : imgBoxHeight * isTop;
       let imgTop = isTop ? imgBoxHeight : 0;
@@ -91,14 +91,15 @@ class PicDetailsDemo extends React.Component {
             width: imgWidth,
             height: imgHeight,
             onComplete: this.onTweenEnd.bind(this, i),
-            left: imgBoxWidth * (i % 4),
+            left: imgBoxWidth * (i % 3),
             top: isTop ? imgBoxHeight : 0,
           }
         : null;
       aAnimation = isOpen
         ? {
             ease: "easeInOutCubic",
-            left: isRight ? imgBoxWidth * 2 - 10 : 0,
+            left: isRight ? "unset" : 0,
+            right: isRight ? 0 : "unset",
             width: "50%",
             height: 350,
             top: 0,
@@ -114,7 +115,7 @@ class PicDetailsDemo extends React.Component {
             ...liStyle,
           }}
           component="li"
-          className={isOpen ? "open" : ""}
+          className={isOpen ? "open isFix" : ""}
           animation={liAnimation}
         >
           <TweenOne
@@ -179,14 +180,18 @@ class PicDetailsDemo extends React.Component {
           >
             {isOpen && (
               <div
-                className={`${this.props.className}-text-wrapper`}
+                className={`${this.props.className}-text-wrapper `}
                 key="text"
                 style={{
                   left: isRight ? "0%" : "50%",
                 }}
               >
-                <div className="content-title">
-                  <h1 style={{ fontSize: "24px" }}>{title}</h1>
+                <div className="content-title ">
+                  <Tooltip title={title}>
+                    <h1 style={{ fontSize: "24px" }} className="max-line1">
+                      {title}
+                    </h1>
+                  </Tooltip>
                   <CloseOutlined onClick={(e) => this.onClose(e, i)} />
                 </div>
                 {/* <Icon type="cross" onClick={(e) => this.onClose(e, i)} /> */}

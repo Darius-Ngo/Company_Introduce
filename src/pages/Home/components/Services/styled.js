@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
 export const StyledSevices = styled.div`
+  .isFix {
+    position: fixed !important;
+    top: 100px !important;
+    width: 90% !important;
+    left: 5% !important;
+    right: 5% !important;
+  }
   .div-img-hover {
     overflow: hidden;
     width: 100%;
@@ -38,7 +45,7 @@ export const StyledSevices = styled.div`
     font-size: 16px;
     line-height: 30px;
     text-align: justify;
-    height: 85%;
+    height: 80%;
     div p {
       font-size: 16px;
       line-height: 30px;
@@ -72,7 +79,6 @@ export const StyledSevices = styled.div`
     background: #fff;
     overflow: hidden;
     /* height: calc(100vh - 20px); */
-    position: relative;
     /* ::before {
       content: "";
       position: absolute;
@@ -90,7 +96,7 @@ export const StyledSevices = styled.div`
     box-shadow: 0 10px 40px #c7d7b5;
     min-width: 550px;
     /* height: calc(100vh - 80px); */
-    height: 700px;
+    height: 866px;
     background: #fff;
     border-radius: 6px;
     overflow: hidden;
@@ -191,8 +197,8 @@ export const StyledSevices = styled.div`
   }
 
   .pic-details-demo-image-wrapper li {
-    width: 220px;
-    height: 152px;
+    width: 305px;
+    height: 203px;
     position: absolute;
     z-index: 0;
     /* background: #fff; */
@@ -209,7 +215,7 @@ export const StyledSevices = styled.div`
   }
 
   .pic-details-demo-image-wrapper li a {
-    width: 220px;
+    width: 305px;
     bottom: 0;
     right: 0;
     z-index: 1;

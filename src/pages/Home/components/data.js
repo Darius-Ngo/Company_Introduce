@@ -92,12 +92,10 @@ export const textData = [
     content: `At Heart and Virtue, we understand that transportation can be a major barrier to independence and social participation for individuals with disabilities. That's why we offer a Travel and Transport service that provides safe, reliable, and accessible transportation to our clients. Our experienced support workers work closely with our clients to develop a personalized travel plan that meets their unique needs and preferences. Whether it's transportation to medical appointments, social outings, or daily activities, our clients can rely on us to provide compassionate and professional support that helps them to live their best life. With our warm heart and warm hands approach, we are committed to empowering our clients to access the community and enjoy all the activities they love without worrying about transportation barriers.`,
   },
   {
-    title: "Personal Care",
-    content: `At Heart and Virtue, we understand that personal care needs can be unique and require sensitive and individualized support. Our Personal Care service is designed to provide compassionate and professional support to our clients to help them maintain their personal hygiene, grooming, and dressing needs. Our experienced support workers work closely with our clients and their healthcare providers to develop a personalized care plan that meets their unique needs and preferences. We prioritize the comfort, dignity, and well-being of our clients and are committed to providing respectful and empowering support that promotes independence and self-confidence. With our warm heart and warm hands approach, we strive to make personal care as comfortable, efficient, and pleasant as possible for our clients so that they can focus on living their best life.`,
-  },
-  {
-    title: "Development Skilled",
-    content: `At Heart and Virtue, we understand the importance of empowering individuals with disabilities to develop the skills they need to achieve their goals and reach their full potential. Our Skills Development service is designed to provide our clients with personalized and professional support to develop their communication, social, cognitive, and vocational skills. Our experienced support workers work closely with our clients to identify their unique strengths, interests, and needs and develop a customized plan to help them develop new skills and enhance their existing ones. Whether it's learning a new language, improving communication skills, or developing work-related skills, we are committed to providing compassionate, supportive, and goal-oriented services that promote our clients' independence and well-being. With our warm heart and warm hands approach, we strive to create a positive and engaging environment where our clients can learn, grow, and thrive.`,
+    title: "Personal Care & Development Skilled",
+    content: `<div><div><b>Personal Care:</b> At Heart and Virtue, we understand the importance of empowering individuals with disabilities to develop the skills they need to achieve their goals and reach their full potential. Our Skills Development service is designed to provide our clients with personalized and professional support to develop their communication, social, cognitive, and vocational skills. Our experienced support workers work closely with our clients to identify their unique strengths, interests, and needs and develop a customized plan to help them develop new skills and enhance their existing ones. Whether it's learning a new language, improving communication skills, or developing work-related skills, we are committed to providing compassionate, supportive, and goal-oriented services that promote our clients' independence and well-being. With our warm heart and warm hands approach, we strive to create a positive and engaging environment where our clients can learn, grow, and thrive.</div>
+    <br/>
+    <div><b>Development Skilled:</b> At Heart and Virtue, we understand that personal care needs can be unique and require sensitive and individualized support. Our Personal Care service is designed to provide compassionate and professional support to our clients to help them maintain their personal hygiene, grooming, and dressing needs. Our experienced support workers work closely with our clients and their healthcare providers to develop a personalized care plan that meets their unique needs and preferences. We prioritize the comfort, dignity, and well-being of our clients and are committed to providing respectful and empowering support that promotes independence and self-confidence. With our warm heart and warm hands approach, we strive to make personal care as comfortable, efficient, and pleasant as possible for our clients so that they can focus on living their best life.</div></div>`,
   },
   {
     title: "Community Participation",
@@ -115,7 +113,7 @@ export const dataArrayImg = [
   { image: img4 },
   { image: img11 },
 
-  { image: img5 },
+  // { image: img5 },
   { image: img6 },
   { image: img7 },
   { image: img8 },
