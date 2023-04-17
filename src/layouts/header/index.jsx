@@ -81,7 +81,9 @@ const Header = () => {
   return (
     <WrapHeader>
       <div className="top-header d-flex justify-content-between align-items-center padding-app">
-        <div className="top-header_slogan">HEART AND VIRTUE</div>
+        <div className="top-header_slogan" style={{ fontWeight: 700 }}>
+          HEART AND VIRTUE
+        </div>
         <div className="top-header_contact d-flex align-items-center">
           {/* <div className="mr-12 divider" /> */}
           <a

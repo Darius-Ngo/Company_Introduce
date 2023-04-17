@@ -8,6 +8,7 @@ import Banner from "./components/Banner/Banner";
 import { imgArrayOffice } from "./components/data";
 import News from "./components/News/News";
 import PicDetailsDemo from "./components/Services/Service";
+import videoBanner from "src/access/video/video-banner.mp4";
 import { StyledHomePage } from "./styled";
 
 const HomePage = () => {
@@ -27,25 +28,22 @@ const HomePage = () => {
   };
   return (
     <StyledHomePage>
-      <div className="video-bg">
-        <video playsinline autoplay="" muted loop>
-          <source
-            src={
-              "https://www.anytimecare.com.au/wp-content/uploads/2022/03/Anytime-Care-Support-Worker-Testimonial.mp4"
-            }
-            type={"video/mp4"}
-          />
-        </video>
-        <div className="content-bg">
-          <div className="content-bg-title">Warm heart & Warm hands</div>
-          <div className="content-bg-label">
-            We put our hearts, our professional and conscientious care in a
-            generation to ensure people live happier, healthier and more
-            meaningful lives.We focus on empowering individuals, encouraging
-            them to develop skills for daily life and healthy relationships, as
-            well as supporting them to boost their confidence every day.
+      <div style={{ height: "calc(100vh - 44px)", overflow: "hidden" }}>
+        <div className="video-bg">
+          <video playsinline autoplay="" muted loop>
+            <source src={videoBanner} type={"video/mp4"} />
+          </video>
+          <div className="content-bg">
+            <div className="content-bg-title">Warm heart & Warm hands</div>
+            <div className="content-bg-label">
+              We put our hearts, our professional and conscientious care in a
+              generation to ensure people live happier, healthier and more
+              meaningful lives.We focus on empowering individuals, encouraging
+              them to develop skills for daily life and healthy relationships,
+              as well as supporting them to boost their confidence every day.
+            </div>
+            {/* <Button>GET STARTED</Button> */}
           </div>
-          <Button>GET STARTED</Button>
         </div>
       </div>
       {/* <div ref={service}>
@@ -88,12 +86,8 @@ const HomePage = () => {
           </Col>
         </Row>
       </div> */}
-      <div className="why-us">
+      {/* <div className="why-us">
         <Row gutter={16}>
-          {/* <Col span={10}>
-            <img src={whyus} alt={""}></img>
-          </Col> */}
-
           <Col span={14}>
             <div className="div-logo"></div>
             <div>
@@ -228,7 +222,7 @@ const HomePage = () => {
             </div>
           </Col>
         </Row>
-      </div>
+      </div> */}
     </StyledHomePage>
   );
 };
