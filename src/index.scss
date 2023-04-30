@@ -35,3 +35,24 @@ body {
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+.title-type-1 {
+  font-size: 20px;
+  color: #134197;
+  font-family: "Inter Bold", sans-serif;
+  padding: 20px 0 15px 0;
+  border-bottom: 1px solid #ebebeb;
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.title-type-1::after {
+  content: "";
+  width: 160px;
+  height: 4px;
+  background: #e08081;
+  position: absolute;
+  left: 40px;
+  bottom: -2px;
+  margin: 0 0 0 -40px;
+}

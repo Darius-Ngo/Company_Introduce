@@ -1,5 +1,5 @@
-import { Col, Divider, Pagination, Row } from "antd";
-import React, { useEffect } from "react";
+import { Col, Divider, Pagination, Row, Spin } from "antd";
+import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { WrapHeader } from "src/layouts/header/styled";
 import styled from "styled-components";
@@ -12,6 +12,7 @@ import Moomba from "src/access/img/new/Moonba.png";
 import pet from "src/access/img/new/pet.png";
 import vocher from "src/access/img/new/vocher.jpg";
 import logo from "src/access/img/news.jpg";
+import GuestServices from "src/services/GuestServices";
 export const dataNew = [
   {
     id: "1",
@@ -96,25 +97,48 @@ export const dataNew = [
 ];
 const NewList = () => {
   const location = useLocation();
+  const [loading, setLoading] = useState(false);
+  const [dataPost, setDataPost] = useState();
+  const [pagination, setPagination] = useState({
+    CurrentPage: 1,
+    PageSize: 20,
+  });
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0 });
-  }, [location]);
+  }, [location, pagination?.CurrentPage]);
 
+  useEffect(() => {
+    if (pagination) getListPost();
+  }, [pagination]);
+
+  const getListPost = async () => {
+    try {
+      setLoading(true);
+      const res = await GuestServices.getListPost({
+        ...pagination,
+      });
+      if (res?.isError) return;
+      setDataPost(res?.Object);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
-    <StyledNewList>
-      <WrapHeader>
-        <div
-          className="slogan d-flex align-items-center justify-content-center"
-          style={{ backgroundImage: `url(${logo})` }}
-        >
-          <h2>NEWS</h2>
-        </div>
-      </WrapHeader>
+    <Spin spinning={loading}>
+      <StyledNewList>
+        <WrapHeader>
+          <div
+            className="slogan d-flex align-items-center justify-content-center"
+            style={{ backgroundImage: `url(${logo})` }}
+          >
+            <h2>NEWS</h2>
+          </div>
+        </WrapHeader>
 
-      <WrapAboutPage className="page-common">
-        <div className="news-re">
-          <div className="news-ab">
-            {/* <div className="news-one">
+        <WrapAboutPage className="page-common">
+          <div className="news-re">
+            <div className="news-ab">
+              {/* <div className="news-one">
             <div className="div-new-item">
               <div className="new-item">
                 <div className="new-img">
@@ -157,25 +181,39 @@ const NewList = () => {
               </div>
             </div>
           </div> */}
-            <Row gutter={[16, 16]} style={{ padding: "0px 24px" }}>
-              {dataNew?.map((item, idx) => (
-                <Col span={8}>
-                  <NewsItem key={idx} newId={item.id} />
+              <Row gutter={[16, 16]} style={{ padding: "0px 24px" }}>
+                {dataPost?.LastestPost?.map((item, idx) => (
+                  <Col span={8}>
+                    <NewsItem key={idx} item={item} />
+                  </Col>
+                ))}
+                <Col span={24}>
+                  <div className="d-flex-end " style={{ marginTop: "32px" }}>
+                    <Pagination
+                      className="d-flex"
+                      total={dataPost?.Total}
+                      hideOnSinglePage={dataPost?.Total <= 10}
+                      current={pagination?.CurrentPage}
+                      pageSize={pagination?.PageSize || 1}
+                      responsive
+                      locale={{ items_per_page: "" }}
+                      showSizeChanger={dataPost?.Total > 10}
+                      onChange={(CurrentPage, PageSize) =>
+                        setPagination({
+                          ...pagination,
+                          CurrentPage,
+                          PageSize,
+                        })
+                      }
+                    />
+                  </div>
                 </Col>
-              ))}
-            </Row>
-            {/* <Row style={{ display: "flex", justifyContent: "flex-end" }}>
-            <Pagination
-              current={1}
-              pageSize={20}
-              total={100}
-              onChange={() => {}}
-            />
-          </Row> */}
+              </Row>
+            </div>
           </div>
-        </div>
-      </WrapAboutPage>
-    </StyledNewList>
+        </WrapAboutPage>
+      </StyledNewList>
+    </Spin>
   );
 };
 

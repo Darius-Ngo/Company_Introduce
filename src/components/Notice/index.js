@@ -3,7 +3,6 @@ import { notification } from "antd";
 import { words } from "lodash";
 
 import { getMsgClient } from "src/lib/stringsUtils";
-import SvgIcon from "../SvgIcon";
 import { CheckOutlined, WarningOutlined } from "@ant-design/icons";
 
 export default function Notice(props) {
