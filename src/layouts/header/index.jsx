@@ -1,11 +1,12 @@
 import { Select } from "antd";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { HiDevicePhoneMobile } from "react-icons/hi2";
 import { AiOutlineMail } from "react-icons/ai";
 import { WrapHeader } from "./styled";
 import ROUTER from "./../../routers/router";
 import { NavLink, useLocation } from "react-router-dom";
 import logoImg from "../../access/img/logo.png";
+import { useTranslation } from "react-i18next";
 
 export const listMenu = [
   {
@@ -57,7 +58,8 @@ export const listMenu = [
 const Header = () => {
   const headerRef = useRef();
   const location = useLocation();
-  const [language, setLanguage] = useState();
+  const { t, i18n } = useTranslation(["header"]);
+  const currentLanguage = i18n.language;
   useEffect(() => {
     const shrinkHeader = () => {
       if (
@@ -75,7 +77,7 @@ const Header = () => {
     };
   }, []);
   useEffect(() => {
-    setLanguage(localStorage.getItem("language") || "en");
+    i18n.changeLanguage(localStorage.getItem("language") || "en");
   }, [localStorage.getItem("language")]);
 
   return (
@@ -99,17 +101,25 @@ const Header = () => {
             <HiDevicePhoneMobile className="mr-8" />
             <div className="phone-contact_number">(+61) 426 126 879</div>
           </a>
-          {/* <Select
-            value={language}
-            className="ml-16"
+          <Select
+            value={currentLanguage}
+            className="ml-16 select-languages"
             onChange={(val) => {
               localStorage.setItem("language", val);
-              window.location.reload();
+              i18n.changeLanguage(val);
             }}
           >
-            <Select.Option value="en">English</Select.Option>
-            <Select.Option value="vi">Tiếng Việt</Select.Option>
-          </Select> */}
+            <Select.Option value="en">
+              <div className="d-flex algin-items-center">
+                <span className="ml-6">English</span>
+              </div>
+            </Select.Option>
+            <Select.Option value="vi">
+              <div className="d-flex algin-items-center">
+                <span className="ml-6">Tiếng Việt</span>
+              </div>
+            </Select.Option>
+          </Select>
         </div>
       </div>
       <div className="header-content">
@@ -128,12 +138,12 @@ const Header = () => {
                     location.pathname === item.path ? "active" : ""
                   }`}
                 >
-                  <div className="menu-list_item_value">{item.name}</div>
+                  <div className="menu-list_item_value">{t(item.name)}</div>
                   {item.submenu ? (
                     <div className="submenu">
                       {item.submenu.map((i, idx) => (
                         <div className="submenu_item">
-                          <div className="text">{i.name}</div>
+                          <div className="text">{t(i.name)}</div>
                         </div>
                       ))}
                     </div>
@@ -146,7 +156,7 @@ const Header = () => {
                     location.pathname === item.path ? "active" : ""
                   }`}
                 >
-                  <div className="menu-list_item_value">{item.name}</div>
+                  <div className="menu-list_item_value">{t(item.name)}</div>
                 </NavLink>
               )
             )}

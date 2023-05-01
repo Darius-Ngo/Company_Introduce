@@ -10,11 +10,13 @@ import News from "./components/News/News";
 import PicDetailsDemo from "./components/Services/Service";
 import videoBanner from "src/access/video/video-banner.mp4";
 import { StyledHomePage } from "./styled";
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
   const location = useLocation();
   const [form] = Form.useForm();
   const service = useRef();
+  const { t } = useTranslation("home");
   useEffect(() => {
     // if (location?.pathname === "/home/service") scrollDown();
     // else
@@ -35,13 +37,7 @@ const HomePage = () => {
           </video>
           <div className="content-bg">
             <div className="content-bg-title">Warm heart & Warm hands</div>
-            <div className="content-bg-label">
-              We put our hearts, our professional and conscientious care in a
-              generation to ensure people live happier, healthier and more
-              meaningful lives.We focus on empowering individuals, encouraging
-              them to develop skills for daily life and healthy relationships,
-              as well as supporting them to boost their confidence every day.
-            </div>
+            <div className="content-bg-label">{t("Text-Slice-Home")}</div>
             {/* <Button>GET STARTED</Button> */}
           </div>
         </div>

@@ -6,8 +6,10 @@ import { Row, Col, Input, Select, DatePicker, Form } from "antd";
 import bgr from "src/access/img/contact_us.jpg";
 import { ContactPageStyle } from "./styled";
 import { WrapHeader } from "src/layouts/header/styled";
+import { useTranslation } from "react-i18next";
 
 const ContactUsPage = () => {
+  const { t } = useTranslation("contact_us");
   const listTime = [
     {
       label: "9:00 AM",
@@ -86,19 +88,19 @@ const ContactUsPage = () => {
           className="slogan d-flex align-items-center justify-content-center"
           style={{ backgroundImage: `url(${bgr})` }}
         >
-          <h2>Warm heart - Warms hands</h2>
+          <h2 className="title-page">{t("Contact Us")}</h2>
         </div>
       </WrapHeader>
       <ContactPageStyle className="page-common">
         <Row gutter={48}>
           <Col xs={24} sm={24} lg={10}>
-            <div className="text-center title">Contact Us</div>
-            <div className="sub-title">Melbourne Branch</div>
+            <div className="text-center title">{t("Contact Us")}</div>
+            {/* <div className="sub-title">Melbourne Branch</div> */}
             <div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1573.8863710536734!2d144.73976765113542!3d-37.91237427500442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6862d3ef3361d%3A0x137b7dd85a80b314!2s12%20Airlie%20Ave%2C%20Point%20Cook%20VIC%203030%2C%20%C3%9Ac!5e0!3m2!1svi!2s!4v1678006863358!5m2!1svi!2s"
                 width="100%"
-                height="200"
+                height="300"
                 style={{ border: "0" }}
                 allowfullscreen=""
                 loading="lazy"
@@ -120,7 +122,7 @@ const ContactUsPage = () => {
             </div>
             <div className="d-flex align-items-center mb-12">
               <AiFillClockCircle className="icon-contact" />
-              <div className="content-contact">Mon – Fri 9:00 AM – 5:00 PM</div>
+              <div className="content-contact">{t("TIME WORK IN WEEK")}</div>
             </div>
             <div className="d-flex align-items-center mb-12">
               <MdPhoneIphone className="icon-contact" />
@@ -130,36 +132,38 @@ const ContactUsPage = () => {
             </div>
           </Col>
           <Col xs={24} sm={24} lg={14}>
-            <div className="text-center title">Book an Appointment</div>
+            <div className="text-center title">{t("Book an Appointment")}</div>
             <div className="content text-center mb-20">
-              We value our participants the most and so any feedback is good
-              feedback. Each feedback helps us get better, and we promise to
-              keep your privacy intact. Please let us know if you need any
-              information before you make a decision to let us support you with
-              your daily life. Thank you for the opportunity of serving you.
+              {t("Book an Appointment Description")}
             </div>
             <Form initialValues={{}} layout="vertical" className="mb-20">
               <Row gutter={16}>
                 <Col xs={24} lg={24}>
                   <Form.Item>
-                    <Input placeholder="NAME*" className="input-info" />
+                    <Input
+                      placeholder={`${t("NAME")}*`}
+                      className="input-info"
+                    />
                   </Form.Item>
                 </Col>
                 <Col xs={24} lg={24}>
                   <Form.Item>
-                    <Input placeholder="EMAIL*" className="input-info" />
+                    <Input
+                      placeholder={`${t("EMAIL")}*`}
+                      className="input-info"
+                    />
                   </Form.Item>
                 </Col>
                 <Col xs={24} lg={24}>
                   <Form.Item>
-                    <Input placeholder="PHONE*" className="input-info" />
+                    <Input
+                      placeholder={`${t("PHONE")}*`}
+                      className="input-info"
+                    />
                   </Form.Item>
                 </Col>
                 <Col span={24}>
-                  <div className="content mb-6">
-                    Mon-Fri : 09:00 AM To 05:00PM | Saturday : 10:00 AM To 03:00
-                    PM
-                  </div>
+                  <div className="content mb-6">{t("TIME OPEN")}</div>
                 </Col>
                 <Col xs={24} lg={12}>
                   <Form.Item>
@@ -174,7 +178,7 @@ const ContactUsPage = () => {
                 <Col xs={24} lg={12}>
                   <Form.Item>
                     <Select
-                      placeholder="select time"
+                      placeholder={t("Select time")}
                       className="select-time"
                       style={{ width: "100%" }}
                     >
@@ -190,14 +194,14 @@ const ContactUsPage = () => {
                   <Form.Item>
                     <Input.TextArea
                       style={{ height: 100 }}
-                      placeholder="HOW CAN WE HELP?"
+                      placeholder={t("HOW CAN WE HELP?")}
                       className="input-info"
                     />
                   </Form.Item>
                 </Col>
                 <Col>
                   <button type="submit" className="btn-send">
-                    SEND
+                    {t("SEND")}
                   </button>
                 </Col>
               </Row>

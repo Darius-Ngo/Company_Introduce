@@ -154,4 +154,7 @@ export const WrapHeader = styled.div`
       font-size: 40px;
     }
   }
+  .select-languages {
+    width: 160px;
+  }
 `;

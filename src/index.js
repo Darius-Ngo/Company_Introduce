@@ -5,7 +5,7 @@ import ReactDOM from "react-dom/client";
 import moment from "moment";
 import "./index.scss";
 import App from "./App";
-import "./translate";
+// import "./translate";
 import ThemeProvider from "./theme/index";
 
 moment.locale("vi");
