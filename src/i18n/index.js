@@ -5,7 +5,7 @@ import resources from "./resources";
 i18n.use(initReactI18next).init({
   resources,
   lng: "en",
-  ns: ["header", "footer", "home"],
+  ns: ["header", "footer", "home", "about_us", "contact_us", "service"],
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,

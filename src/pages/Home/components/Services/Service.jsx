@@ -3,71 +3,58 @@ import PropTypes from "prop-types";
 import TweenOne, { TweenOneGroup } from "rc-tween-one";
 import { CloseOutlined } from "@ant-design/icons";
 import ReactDOM from "react-dom";
-import React from "react";
+import React, { useState } from "react";
 import { StyledSevices } from "./styled";
 import { Button, Tooltip } from "antd";
 import { dataArrayImg, textData } from "../data";
+import { useTranslation } from "react-i18next";
 
 let dataArray = dataArrayImg.map((item, i) => ({ ...item, ...textData[i] }));
-class PicDetailsDemo extends React.Component {
-  static propTypes = {
-    className: PropTypes.string,
-  };
 
-  static defaultProps = {
-    className: "pic-details-demo",
-  };
+const PicDetailsDemo = ({ className = "pic-details-demo" }) => {
+  const [picOpen, setPicOpen] = useState({});
+  const { t } = useTranslation("service");
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      picOpen: {},
-    };
-  }
-
-  onImgClick = (e, i) => {
-    const { picOpen } = this.state;
+  const onImgClick = (e, i) => {
+    const newPicOpen = {};
     Object.keys(picOpen).forEach((key) => {
       if (key !== i && picOpen[key]) {
-        picOpen[key] = false;
+        newPicOpen[key] = false;
       }
     });
-    picOpen[i] = true;
-    this.setState({
-      picOpen,
-    });
+    newPicOpen[i] = true;
+    setPicOpen(newPicOpen);
   };
 
-  onClose = (e, i) => {
-    const { picOpen } = this.state;
-    picOpen[i] = false;
-    this.setState({
-      picOpen,
-    });
+  const onClose = (e, i) => {
+    const newPicOpen = { ...picOpen };
+    newPicOpen[i] = false;
+    setPicOpen(newPicOpen);
   };
 
-  onTweenEnd = (i) => {
-    const { picOpen } = this.state;
-    delete picOpen[i];
-    this.setState({
-      picOpen,
-    });
+  const onTweenEnd = (i) => {
+    const newPicOpen = { ...picOpen };
+    delete newPicOpen[i];
+    setPicOpen({ ...newPicOpen });
   };
 
-  getDelay = (e) => {
+  const getDelay = (e) => {
     const i = e.index + (dataArray.length % 3);
     return (i % 3) * 100 + Math.floor(i / 3) * 100 + 200;
   };
 
-  getLiChildren = () => {
+  const getLiChildren = () => {
     const imgWidth = 293;
     const imgHeight = 203;
     const imgBoxWidth = 347;
     const imgBoxHeight = 256;
+
     return dataArray.map((item, i) => {
-      const { image, title, content } = item;
-      const isEnter = typeof this.state.picOpen[i] === "boolean";
-      const isOpen = this.state.picOpen[i];
+      const { image } = item;
+      const title = t(item.title);
+      const content = t(item.content);
+      const isEnter = typeof picOpen[i] === "boolean";
+      const isOpen = picOpen[i];
 
       const left = isEnter ? 0 : imgBoxWidth * (i % 3);
       const imgLeft = isEnter ? imgBoxWidth * (i % 3) : 0;
@@ -79,7 +66,7 @@ class PicDetailsDemo extends React.Component {
       imgTop = isEnter ? imgTop : 0;
 
       const liStyle = isEnter
-        ? { width: "100%", height: 350, zIndex: 1 }
+        ? { width: "100%", height: 350, zIndex: 1000 }
         : null;
       const liAnimation = isOpen
         ? { boxShadow: "0 2px 8px rgba(140, 140, 140, .35)" }
@@ -90,7 +77,7 @@ class PicDetailsDemo extends React.Component {
             ease: "easeInOutCubic",
             width: imgWidth,
             height: imgHeight,
-            onComplete: this.onTweenEnd.bind(this, i),
+            onComplete: onTweenEnd.bind(this, i),
             left: imgBoxWidth * (i % 3),
             top: isTop ? imgBoxHeight : 0,
           }
@@ -121,7 +108,7 @@ class PicDetailsDemo extends React.Component {
           <TweenOne
             component="a"
             onClick={(e) => {
-              isOpen ? this.onClose(e, i) : this.onImgClick(e, i);
+              isOpen ? onClose(e, i) : onImgClick(e, i);
             }}
             style={{
               left: imgLeft,
@@ -142,13 +129,7 @@ class PicDetailsDemo extends React.Component {
             )}
             <div className="div-img-hover">
               <img
-                // onMouseOver={(e) => {
-                //   this.onImgClick(e, i);
-                // }}
-                // onMouseOut={(e) => {
-                //   this.onClose(e, i);
-                // }}
-                className="img-item-hover"
+                // className="img-item-hover"
                 src={image}
                 alt={""}
                 width="100%"
@@ -180,7 +161,7 @@ class PicDetailsDemo extends React.Component {
           >
             {isOpen && (
               <div
-                className={`${this.props.className}-text-wrapper `}
+                className={`${className}-text-wrapper `}
                 key="text"
                 style={{
                   left: isRight ? "0%" : "50%",
@@ -192,15 +173,9 @@ class PicDetailsDemo extends React.Component {
                       {title}
                     </h1>
                   </Tooltip>
-                  <CloseOutlined onClick={(e) => this.onClose(e, i)} />
+                  <CloseOutlined onClick={(e) => onClose(e, i)} />
                 </div>
-                {/* <Icon type="cross" onClick={(e) => this.onClose(e, i)} /> */}
                 <em />
-                {/* <p
-                >
-                  {content}
-                </p> */}
-
                 <div className="content-service scrollbar style-1">
                   <div
                     dangerouslySetInnerHTML={{
@@ -216,33 +191,33 @@ class PicDetailsDemo extends React.Component {
     });
   };
 
-  render() {
-    return (
-      <StyledSevices>
-        <div>
-          <div className={`${this.props.className}-wrapper`}>
-            <div className={this.props.className}>
-              <QueueAnim
-                type="bottom"
-                className={`${this.props.className}-title`}
-              >
-                <h1 key="h1">SERVICES WE PROVIDE</h1>
-                <p key="p">Provided by Our Caring Professionals</p>
-              </QueueAnim>
-              <QueueAnim
-                delay={this.getDelay}
-                component="ul"
-                className={`${this.props.className}-image-wrapper`}
-                interval={0}
-                type="bottom"
-              >
-                {this.getLiChildren()}
-              </QueueAnim>
-            </div>
+  return (
+    <StyledSevices>
+      <div>
+        <div className={`${className}-wrapper`}>
+          <div className={className}>
+            <QueueAnim type="bottom" className={`${className}-title`}>
+              <h1 key="h1">SERVICES WE PROVIDE</h1>
+              <p key="p">Provided by Our Caring Professionals</p>
+            </QueueAnim>
+            <QueueAnim
+              delay={getDelay}
+              component="ul"
+              className={`${className}-image-wrapper`}
+              interval={0}
+              type="bottom"
+            >
+              {getLiChildren()}
+            </QueueAnim>
           </div>
         </div>
-      </StyledSevices>
-    );
-  }
-}
+      </div>
+    </StyledSevices>
+  );
+};
+
+PicDetailsDemo.propTypes = {
+  className: PropTypes.string,
+};
+
 export default PicDetailsDemo;

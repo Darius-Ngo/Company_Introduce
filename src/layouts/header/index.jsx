@@ -109,14 +109,19 @@ const Header = () => {
               i18n.changeLanguage(val);
             }}
           >
-            <Select.Option value="en">
-              <div className="d-flex algin-items-center">
-                <span className="ml-6">English</span>
+            <Select.Option value="en" bordered={false}>
+              <div className="d-flex algin-items-center h-100">
+                <img src={""} alt="" />
+                <span className="ml-6 h-100 d-flex align-items-center">
+                  English
+                </span>
               </div>
             </Select.Option>
             <Select.Option value="vi">
-              <div className="d-flex algin-items-center">
-                <span className="ml-6">Tiếng Việt</span>
+              <div className="d-flex algin-items-center h-100">
+                <span className="ml-6 h-100 d-flex align-items-center">
+                  Tiếng Việt
+                </span>
               </div>
             </Select.Option>
           </Select>

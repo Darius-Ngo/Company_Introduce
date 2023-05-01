@@ -156,5 +156,8 @@ export const WrapHeader = styled.div`
   }
   .select-languages {
     width: 160px;
+    .ant-select-selector {
+      border: none;
+    }
   }
 `;
