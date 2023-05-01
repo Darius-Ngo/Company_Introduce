@@ -1,5 +1,79 @@
 import styled from "styled-components";
 
+export const RelateNewsStyled = styled.div`
+  .subHeader {
+  }
+  .relate-news-header {
+    background: #e08081;
+    padding: 30px;
+  }
+  .relate-news-header-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+  .relate-news-header-space {
+    margin-top: 20px;
+    border: 2px solid #fff;
+  }
+  .relate-news-content {
+    padding: 40px 30px;
+    background: #f7f7f7;
+  }
+  .relate-news-text-care {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+  }
+  .relate-news-box-care {
+    margin-top: 30px;
+  }
+  .relate-news-box-care-title {
+    font-weight: 600;
+    color: #154398;
+  }
+  .relate-news-box-care-time {
+    color: #838383;
+    font-size: 12px;
+    margin: 15px 0px;
+  }
+  .relate-news-tag {
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 10px 8px;
+    font-size: 10px;
+    color: #000000;
+  }
+`;
+
+export const ViewPDFStyle = styled.div`
+  .pdf-container {
+    height: auto !important;
+    border: none;
+  }
+  .ant-modal-body {
+    padding: 0;
+    overflow: hidden hidden;
+  }
+  .ant-modal-header {
+    &::after {
+      content: unset;
+    }
+  }
+  .pdf-container {
+    height: calc(100vh - 20px);
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rpv-default-layout__toolbar {
+      position: sticky;
+      top: 0;
+    }
+  }
+`;
 export const StyledNewList = styled.div`
   .news-re {
     /* position: relative;

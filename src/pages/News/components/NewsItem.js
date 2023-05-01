@@ -3,9 +3,11 @@ import styled from "styled-components";
 import linkIcon from "src/access/img/link-icon.png";
 import { useNavigate } from "react-router-dom";
 import { dataNew } from "..";
+import moment from "moment";
 
 const StyledNewsItem = styled.div`
   height: 100%;
+  padding: 0px 12px;
   .list-new {
     height: 100%;
     display: flex;
@@ -16,16 +18,17 @@ const StyledNewsItem = styled.div`
   .div-new-item {
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
+    flex-direction: column;
     margin: 10px auto 30px auto;
+    box-shadow: -1px 1px 4px 1px rgb(0 0 0 / 5%);
   }
   .new-item {
     /* :hover {
       transform: translateY(-10px);
     } */
     height: 100%;
-    box-shadow: -1px 1px 4px 1px rgb(0 0 0 / 5%);
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -120,22 +123,21 @@ const StyledNewsItem = styled.div`
     }
   }
 `;
-const NewsItem = ({ newId }) => {
+const NewsItem = ({ item }) => {
   const nav = useNavigate();
-  const item = dataNew?.find((i) => i?.id === newId);
   return (
     <StyledNewsItem>
       <div
         className="div-new-item"
         onClick={() => {
-          nav(`/news/${item?.id}`);
+          nav(`/news/${item?.PostID}`);
         }}
       >
         <div className="new-item">
           <div className="new-img">
             <img
               src={
-                item?.img ||
+                item?.FileUrl ||
                 "https://img.freepik.com/premium-photo/woman-mediacal-nurse-doctor-uniform-sick-online-video-call-webcam_754108-449.jpg?w=2000"
               }
               alt=""
@@ -143,40 +145,31 @@ const NewsItem = ({ newId }) => {
           </div>
           <div className="div-link">
             <div className="link">
-              <a
-                href={item?.linknew}
-                target="_blank"
-                rel="noreferrer"
-                style={{ cursor: "pointer" }}
-                onClick={(e) => {
-                  e?.stopPropagation();
-                }}
-              >
+              <span>
                 <img src={linkIcon} alt="link" />
-              </a>
+              </span>
             </div>
             <div className="new-name max-line1" style={{ padding: "0px 20px" }}>
-              {item?.title}
+              {item?.Title}
             </div>
             <div className="new-name max-line1">News</div>
           </div>
           <div className="new-sumary">
-            <div className="new-title max-line1">
-              <span>{item?.title}</span>
+            <div className="new-title max-line2">
+              <span>{item?.Title}</span>
             </div>
-            <div className="new-date ">{item?.date}</div>
-            <div className="new-content max-line3">
-              <div
-                className="new-content "
-                dangerouslySetInnerHTML={{
-                  __html: item?.content,
-                }}
-              />
+            <div className="new-date ">
+              {item?.PublishDate && moment(item?.PublishDate).format("LLLL")}
             </div>
-
-            <div className="read-more">{"Read more >>"}</div>
+            <div
+              className="new-content max-line3"
+              style={{ lineHeight: "1.5" }}
+            >
+              {item?.Summary}
+            </div>
           </div>
         </div>
+        <div className="read-more p-16">{"Read more >>"}</div>
       </div>
     </StyledNewsItem>
   );
