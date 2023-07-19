@@ -115,7 +115,7 @@ const HomePage = () => {
               </div>
               <br />
               <div>
-                <b>Who are Heart and Virtue together?</b>
+                <b>Who are A2Z Community Care together?</b>
               </div>
               <div style={{ color: "#666" }}>
                 We have a strong expertise in supporting people with
