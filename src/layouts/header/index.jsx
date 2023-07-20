@@ -92,7 +92,7 @@ const Header = () => {
             href="mailto:someone@example.com"
             className="contact-info d-flex align-items-center"
           >
-            <AiOutlineMail className="mr-8" /> info@heartandvitue.com.au
+            <AiOutlineMail className="mr-8" /> info@a2zcommunitycare.com.au
           </a>
           <a
             href="tel: +610426126879"
