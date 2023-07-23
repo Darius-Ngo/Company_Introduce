@@ -68,7 +68,7 @@ export const WrapHeaderServices = styled.div`
         align-items: center;
         img {
           height: 70%;
-          filter: brightness(250%);
+          /* filter: brightness(250%); */
         }
       }
       .menu-list_item {

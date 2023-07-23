@@ -4,7 +4,7 @@ export const RelateNewsStyled = styled.div`
   .subHeader {
   }
   .relate-news-header {
-    background: #e08081;
+    background: #007eb9;
     padding: 30px;
   }
   .relate-news-header-text {

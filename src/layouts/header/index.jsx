@@ -92,7 +92,7 @@ const Header = () => {
             href="mailto:someone@example.com"
             className="contact-info d-flex align-items-center"
           >
-            <AiOutlineMail className="mr-8" /> info@a2zcommunitycare.com.au
+            <AiOutlineMail className="mr-8" /> Info@a2zcommunitycare.com.au
           </a>
           <a
             href="tel: +610426126879"
@@ -135,7 +135,10 @@ const Header = () => {
           <div className="logo-web">
             <img src={logoImg} alt="" />
           </div>
-          <div className="menu-list d-flex align-items-center">
+          <div
+            className="menu-list d-flex align-items-center"
+            style={{ textTransform: "uppercase" }}
+          >
             {listMenu.map((item, idx) =>
               item.submenu ? (
                 <div

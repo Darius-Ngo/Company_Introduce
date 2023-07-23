@@ -177,7 +177,7 @@ export const StyledSevices = styled.div`
   }
 
   .pic-details-demo-title h1 {
-    color: #e86768;
+    color: #007eb9;
     font-size: 26px;
   }
 

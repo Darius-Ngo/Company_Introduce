@@ -54,7 +54,7 @@ const StyledNewsItem = styled.div`
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background: #e08081a8;
+      background: #007eb9a8;
       position: absolute;
       display: none;
       top: 0;

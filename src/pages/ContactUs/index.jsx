@@ -111,7 +111,7 @@ const ContactUsPage = () => {
             <div className="d-flex align-items-center mb-12 mt-12">
               <FaEnvelopeOpenText className="icon-contact" />
               <div className="content-contact link-contact">
-                info@a2zcommunitycare.com.au
+                Info@a2zcommunitycare.com.au
               </div>
             </div>
             <div className="d-flex align-items-center mb-12">

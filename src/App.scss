@@ -1,4 +1,4 @@
-@import './access/scss/index.scss';
+@import "./access/scss/index.scss";
 
 .padding-app {
   padding: 0 24px;
@@ -9,10 +9,11 @@ a {
   color: unset;
 }
 
-div,p,span {
+div,
+p,
+span {
   line-height: 1.5;
   font-size: 15px;
-  
 }
 
 .loading-center {
@@ -52,14 +53,14 @@ div,p,span {
 .title-main {
   font-size: 32px;
   line-height: 2;
-  color: #e08081;
+  color: #007eb9;
 }
 
 .subtitle {
   font-size: 20px;
   font-weight: 600;
   line-height: 2;
-  color: #e08081;
+  color: #007eb9;
 }
 
 .page-common {

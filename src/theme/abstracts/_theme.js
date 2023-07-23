@@ -5,7 +5,7 @@ const theme = {
   headerContentHeight: "120px",
   headerShrinkHeight: "80px",
   // primaryColor: "#17176f",
-  primaryColor: "#e08081",
+  primaryColor: "#007eb9",
   black: "#000",
   white: "#fff",
   warmYellow: "#faad14",
